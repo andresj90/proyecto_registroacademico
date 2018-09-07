@@ -7,6 +7,8 @@ import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
+import javax.persistence.JoinColumn;
+import javax.persistence.ManyToOne;
 
 /**
  * Clase para modelar la Entidad Horario Grupo Curso
@@ -14,7 +16,7 @@ import javax.persistence.Id;
  */
 
 @Entity
-public class HorarioGrupoCurso implements Serializable{
+public class HorarioGrupoCursoEntity implements Serializable{
     /**
      * Atributo estático para el manejo de versiones de la entidad
      */
@@ -29,14 +31,16 @@ public class HorarioGrupoCurso implements Serializable{
     /**
      * Llave Foranea con la Entidad Curso Grupo
      */
-    @Column (name = "curso_grupo_id")
-    private Long cursoGrupoId;
+    @ManyToOne
+    @JoinColumn(name="id_curso_grupo")
+    private CursoGrupoEntity cursoGrupoId;
     
     /**
      * Llave Foranea con la Entidad Horario
      */
-    @Column (name = "horario_id")
-    private Long horarioId;
+    @ManyToOne
+    @JoinColumn(name="id_horario")
+    private HorarioEntity horarioId;
     
     /**
      * Métodos GET Y SET
@@ -50,20 +54,19 @@ public class HorarioGrupoCurso implements Serializable{
         this.idHorarioGrupoCurso = idHorarioGrupoCurso;
     }
 
-    public Long getCursoGrupoId() {
+    public CursoGrupoEntity getCursoGrupoId() {
         return cursoGrupoId;
     }
 
-    public void setCursoGrupoId(Long cursoGrupoId) {
+    public void setCursoGrupoId(CursoGrupoEntity cursoGrupoId) {
         this.cursoGrupoId = cursoGrupoId;
     }
 
-    public Long getHorarioId() {
+    public HorarioEntity getHorarioId() {
         return horarioId;
     }
 
-    public void setHorarioId(Long horarioId) {
+    public void setHorarioId(HorarioEntity horarioId) {
         this.horarioId = horarioId;
     }
-    
 }
