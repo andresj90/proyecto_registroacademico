@@ -1,4 +1,3 @@
-
 package registro.registroacademico.entities;
 
 import java.io.Serializable;
@@ -19,7 +18,7 @@ import javax.persistence.ManyToOne;
 public class InscripcionEntity implements Serializable{
     
      /**
-     * LLave primaria de la tabla Tipo_Documento
+     * LLave primaria de la tabla Inscripcion
      */
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
