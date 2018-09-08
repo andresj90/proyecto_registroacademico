@@ -36,6 +36,8 @@ public class TipoDocumentoEntity implements Serializable{
      * Atributo tipo de documento; este es el nombre del tipo  de documento 
      * eje : cedula
      */
+    @Column (name = "tipo_documento", nullable = false)
+    private String tipo_documento;
     
     /**
      * Constructor de la clase TipoDocumento
@@ -44,8 +46,7 @@ public class TipoDocumentoEntity implements Serializable{
     }
 
     
-    @Column (name = "tipo_documento", nullable = false)
-    private String tipo_documento;
+    /**METODOS SET Y GET*/ 
 
     public int getId_tipo_documento() {
         return id_tipo_documento;
