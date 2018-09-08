@@ -1,8 +1,3 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
 package registro.registroacademico.entities;
 
 import java.io.Serializable;
@@ -11,23 +6,19 @@ import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
+import javax.persistence.JoinColumn;
+import javax.persistence.ManyToOne;
 
 /**
- * Clase encargada de modelar la tabla Tipo_Documento
+ * Clase encargada de modelar la tabla Inscripcion
  * @author Andres Jara
  */
 
-
-/**
- * Nombre de la tabla que va a almacenar la información acerca de la inscripción a 
- * los cursos 
- * @author AndresJ90
- */
 @Entity (name = "Inscripcion")
 public class InscripcionEntity implements Serializable{
     
      /**
-     * LLave primaria de la tabla Tipo_Documento
+     * LLave primaria de la tabla Inscripcion
      */
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
@@ -45,8 +36,8 @@ public class InscripcionEntity implements Serializable{
      * Atributo estudiante_id_est, este es una llave foranea la cual conecta con 
      * la tabla estudiante, nos permitira manejar la inscripcion al estudiante
      */    
-
-    @Column (name = "estudiante_id_est", nullable = false)
+    @ManyToOne
+    @JoinColumn (name = "estudiante_id_est", nullable = false)
     private int estudiante_id_est; 
     
     /**
@@ -86,4 +77,4 @@ public class InscripcionEntity implements Serializable{
     }
     
     
-}//clase
+}//clase  
