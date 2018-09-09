@@ -29,7 +29,8 @@ public class InscripcionEntity implements Serializable{
      * la tabla que maneja la creacion de cursos 
      */
     
-    @Column(name = "curso_grupo_id", nullable = false)
+    @ManyToOne
+    @JoinColumn(name = "curso_grupo_id", nullable = false)
     private int curso_grupo_id;
     
     /**

@@ -1,12 +1,3 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- *//*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
 package registro.registroacademico.entities;
 
 import java.io.Serializable;
@@ -15,15 +6,13 @@ import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
+import javax.persistence.JoinColumn;
+import javax.persistence.ManyToOne;
 
 /**
  * Clase encargada de modelar la tabla Curso
  * @author Uriel Rodríguez Vallarta
  */
-/**
- * Nombre de la tabla que va a almacenar la información acerca de Curso
- */
-
 @Entity (name = "Curso")
 public class CursoEntity implements Serializable{
 
@@ -41,10 +30,13 @@ public class CursoEntity implements Serializable{
     private String nom_curso;
     
     /**
-     * Atributo programa que es una llave foranea y nos manejará el curso
+     * Atributo programa_id_pr la cual es una llave foranea de la tabla programa
+     * y nos ayudará a construir el curso.
      */
-    @Column (name = "programa_id_pr", nullable = false)
-    private String programa_id_pr;
+    
+    @ManyToOne
+    @JoinColumn (name = "programa_id_pr", nullable = false)
+    private int programa_id_pr;
     
     /**
      * Constructor de la clase Curso
@@ -71,11 +63,11 @@ public class CursoEntity implements Serializable{
         this.nom_curso = nom_curso;
     }
 
-    public String getPrograma_id_pr() {
+    public int getPrograma_id_pr() {
         return programa_id_pr;
     }
 
-    public void setPrograma_id_pr(String programa_id_pr) {
+    public void setPrograma_id_pr(int programa_id_pr) {
         this.programa_id_pr = programa_id_pr;
     }   
 }//class

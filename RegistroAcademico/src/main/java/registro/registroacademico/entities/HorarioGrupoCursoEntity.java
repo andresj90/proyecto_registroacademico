@@ -15,7 +15,7 @@ import javax.persistence.ManyToOne;
  * @author David Cañon
  */
 
-@Entity
+@Entity(name = "Horario_Grupo_Curso")
 public class HorarioGrupoCursoEntity implements Serializable{
     /**
      * Atributo estático para el manejo de versiones de la entidad

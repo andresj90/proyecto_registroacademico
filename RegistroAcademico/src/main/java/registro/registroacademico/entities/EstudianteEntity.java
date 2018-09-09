@@ -81,7 +81,8 @@ public class EstudianteEntity implements Serializable{
      * de la tabla programa 
      */
     
-    @Column (name = "programa_id_pr", nullable = false)
+    @ManyToOne
+    @JoinColumn (name = "programa_id_pr", nullable = false)
     private int programa_id_pr;
     
     /**
