@@ -13,7 +13,7 @@ import javax.persistence.Id;
  * @author David Cañon
  */
 
-@Entity
+@Entity(name = "Horario")
 public class HorarioEntity implements Serializable{
     /**
      * Atributo estático para el manejo de versiones de la entidad

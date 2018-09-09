@@ -13,7 +13,7 @@ import javax.persistence.Id;
  * @author David Cañon
  */
 
-@Entity
+@Entity(name = "Tipo_Curso")
 public class TipoCursoEntity implements Serializable{
     /**
      * Atributo estático para el manejo de versiones de la entidad

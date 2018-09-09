@@ -1,4 +1,3 @@
-
 package registro.registroacademico.entities;
 
 import java.io.Serializable;
@@ -14,10 +13,10 @@ import javax.persistence.ManyToOne;
  * Clase para modelar la Entidad Curso Grupo
  * @author David Cañon
  */
-@Entity
+@Entity(name = "Curso_Grupo")
 public class CursoGrupoEntity implements Serializable{
     /**
-     * Atributo estático para el manejo de versiones de la entidad
+     * Atributo estático para el manejo de curso_grupo
      */
     private static final long serialVersionUID=1L;
     
@@ -33,7 +32,7 @@ public class CursoGrupoEntity implements Serializable{
      * Llave Foranea con la Entidad Curso
      */
     @ManyToOne
-    @JoinColumn(name="id_Curso")
+    @JoinColumn(name="id_curso")
     private CursoEntity cursoIdCur;
     
     /**

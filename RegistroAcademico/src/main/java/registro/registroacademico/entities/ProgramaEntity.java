@@ -1,8 +1,3 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
 package registro.registroacademico.entities;
 
 import java.io.Serializable;
@@ -11,15 +6,14 @@ import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
+import javax.persistence.JoinColumn;
+import javax.persistence.ManyToOne;
 
 /**
  * Clase encargada de modelar la tabla Programa
  * @author Uriel Rodríguez Vallarta
  */
 
-/**
- * Nombre de la tabla que va a almacenar la información acerca del programa
- */
 @Entity (name = "Programa")
 public class ProgramaEntity implements Serializable{
     
@@ -34,7 +28,7 @@ public class ProgramaEntity implements Serializable{
      * Atributo que maneja nombre de programa
      */
     @Column(name = "nombre_programa", nullable = false)
-    private int nombre_programa;
+    private String nombre_programa;
     
     /**
      * Atributo que maneja los créditos del programa a cursar
@@ -46,21 +40,24 @@ public class ProgramaEntity implements Serializable{
      * Atributo tipo_programa_id, este es una llave foranea la cual conecta con 
      * la tabla que maneja los tipos de programa
      */
-    @Column(name = "tipo_programa_id", nullable = false)
+    @ManyToOne
+    @JoinColumn(name = "tipo_programa_id", nullable = false)
     private int tipo_programa_id;
     
     /**
      * Atributo facultad_id_facultad, este es una llave foranea la cual conecta con 
      * la tabla de facultad
      */    
-    @Column (name = "facultad_id_facultad", nullable = false)
+    @ManyToOne
+    @JoinColumn (name = "facultad_id_facultad", nullable = false)
     private int facultad_id_facultad; 
     
     /**
      * Atributo coordinador_id_coor, este es una llave foranea la cual conecta con 
      * la tabla de coordinador
      */    
-    @Column (name = "coordinador_id_coor", nullable = false)
+    @ManyToOne
+    @JoinColumn (name = "coordinador_id_coor", nullable = false)
     private int coordinador_id_coor; 
     
     /**
@@ -81,11 +78,11 @@ public class ProgramaEntity implements Serializable{
         this.id_programa = id_programa;
     }
 
-    public int getNombre_programa() {
+    public String getNombre_programa() {
         return nombre_programa;
     }
 
-    public void setNombre_programa(int nombre_programa) {
+    public void setNombre_programa(String nombre_programa) {
         this.nombre_programa = nombre_programa;
     }
 

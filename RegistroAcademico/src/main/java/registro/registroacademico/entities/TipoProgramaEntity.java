@@ -1,8 +1,3 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
 package registro.registroacademico.entities;
 
 import java.io.Serializable;
@@ -16,16 +11,12 @@ import javax.persistence.Id;
  * Clase encargada de modelar la tabla Tipo_Programa
  * @author Uriel Rodríguez Vallarta
  */
-/**
- * Nombre de la tabla que va a almacenar la información acerca de el tipo de 
- * programa
- */
 
 @Entity (name = "Tipo_Programa")
 public class TipoProgramaEntity implements Serializable{
 
     /**
-     * LLave primaria de la tabla Tipo_Documento
+     * LLave primaria de la tabla Tipo_Programa
      */
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
