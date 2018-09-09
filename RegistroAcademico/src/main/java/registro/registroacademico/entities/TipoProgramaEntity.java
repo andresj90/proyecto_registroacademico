@@ -63,8 +63,3 @@ public class TipoProgramaEntity implements Serializable{
         this.nombre_tipo_programa = nombre_tipo_programa;
     } 
 }//class
-
-
-    
-
-    
