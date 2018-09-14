@@ -18,7 +18,7 @@ import registro.registroacademico.entities.FacultadEntity;
  */
 @Stateless
 public class FacultadPersistence {
-@PersistenceContext(unitName = "registro_RegistroAcademico_war_1.0-SNAPSHOTPU")
+@PersistenceContext(unitName = "registroAcademicoPU")
     private EntityManager entityManager;
     /**
      * Metodo que lista todos los elementos que se encuentran en la tabla Facultad
@@ -33,7 +33,7 @@ public class FacultadPersistence {
      * @param id
      * @return facultadEncontrado
      */
-    public FacultadEntity find(Long id){
+    public FacultadEntity find(int id){
         FacultadEntity facultadEncontrado = entityManager.find(FacultadEntity.class, id);
         return facultadEncontrado;
     }
@@ -59,7 +59,7 @@ public class FacultadPersistence {
      * Metodo que nos permite eliminar una Facultad
      * @param id 
      */
-    public void remove(Long id){
+    public void remove(int id){
         FacultadEntity facultadEliminar = entityManager.find(FacultadEntity.class, id);
         entityManager.remove(facultadEliminar);
     }         
