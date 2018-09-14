@@ -14,7 +14,7 @@ import registro.registroacademico.entities.HorarioGrupoCursoEntity;
  */
 @Stateless
 public class HorarioGrupoCursoPersistence {
-    @PersistenceContext(unitName = "koloPU")
+    @PersistenceContext(unitName = "registroacademicoPU")
     protected EntityManager em;
 
     /**
