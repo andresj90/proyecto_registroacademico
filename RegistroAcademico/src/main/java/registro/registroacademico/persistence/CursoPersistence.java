@@ -18,7 +18,7 @@ import registro.registroacademico.entities.CursoEntity;
  */
 @Stateless
 public class CursoPersistence {
-    @PersistenceContext(unitName = "registroAcademicoPU")
+    @PersistenceContext(unitName = "registroacademicoPU")
     private EntityManager entityManager;
     /**
      * Metodo que lista todos los elementos que se encuentran en la tabla Curso
