@@ -18,7 +18,7 @@ import registro.registroacademico.entities.FacultadEntity;
  */
 @Stateless
 public class FacultadPersistence {
-@PersistenceContext(unitName = "registroAcademicoPU")
+@PersistenceContext(unitName = "registroacademicoPU")
     private EntityManager entityManager;
     /**
      * Metodo que lista todos los elementos que se encuentran en la tabla Facultad
