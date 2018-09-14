@@ -18,7 +18,7 @@ import registro.registroacademico.entities.TipoProgramaEntity;
  */
 @Stateless
 public class TipoProgramaPersistence {
-@PersistenceContext(unitName = "registro_RegistroAcademico_war_1.0-SNAPSHOTPU")
+@PersistenceContext(unitName = "registroAcademicoPU")
     private EntityManager entityManager;
     /**
      * Metodo que lista todos los elementos que se encuentran en la tabla Tipo Programa
@@ -33,7 +33,7 @@ public class TipoProgramaPersistence {
      * @param id
      * @return tipoprogramaEncontrado
      */
-    public TipoProgramaEntity find(Long id){
+    public TipoProgramaEntity find(int id){
         TipoProgramaEntity tipoprogramaEncontrado = entityManager.find(TipoProgramaEntity.class, id);
         return tipoprogramaEncontrado;
     }
@@ -59,7 +59,7 @@ public class TipoProgramaPersistence {
      * Metodo que nos permite eliminar un Tipo Programa
      * @param id 
      */
-    public void remove(Long id){
+    public void remove(int id){
         TipoProgramaEntity tipoprogramaEliminar = entityManager.find(TipoProgramaEntity.class, id);
         entityManager.remove(tipoprogramaEliminar);
     }         
