@@ -18,7 +18,7 @@ import registro.registroacademico.entities.ProgramaEntity;
  */
 @Stateless
 public class ProgramaPersistence {
-@PersistenceContext(unitName = "registro_RegistroAcademico_war_1.0-SNAPSHOTPU")
+@PersistenceContext(unitName = "registroAcademicoPU")
     private EntityManager entityManager;
     /**
      * Metodo que lista todos los elementos que se encuentran en la tabla Programa
@@ -33,7 +33,7 @@ public class ProgramaPersistence {
      * @param id
      * @return programaEncontrado
      */
-    public ProgramaEntity find(Long id){
+    public ProgramaEntity find(int id){
         ProgramaEntity programaEncontrado = entityManager.find(ProgramaEntity.class, id);
         return programaEncontrado;
     }
@@ -59,7 +59,7 @@ public class ProgramaPersistence {
      * Metodo que nos permite eliminar una Programa
      * @param id 
      */
-    public void remove(Long id){
+    public void remove(int id){
         ProgramaEntity programaEliminar = entityManager.find(ProgramaEntity.class, id);
         entityManager.remove(programaEliminar);
     }         
