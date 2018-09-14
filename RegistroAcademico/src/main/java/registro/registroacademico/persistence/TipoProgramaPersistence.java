@@ -18,7 +18,7 @@ import registro.registroacademico.entities.TipoProgramaEntity;
  */
 @Stateless
 public class TipoProgramaPersistence {
-@PersistenceContext(unitName = "registroAcademicoPU")
+@PersistenceContext(unitName = "registroacademicoPU")
     private EntityManager entityManager;
     /**
      * Metodo que lista todos los elementos que se encuentran en la tabla Tipo Programa
