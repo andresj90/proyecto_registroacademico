@@ -18,7 +18,7 @@ import registro.registroacademico.entities.CursoEntity;
  */
 @Stateless
 public class CursoPersistence {
-    @PersistenceContext(unitName = "registro_RegistroAcademico_war_1.0-SNAPSHOTPU")
+    @PersistenceContext(unitName = "registroAcademicoPU")
     private EntityManager entityManager;
     /**
      * Metodo que lista todos los elementos que se encuentran en la tabla Curso
@@ -33,7 +33,7 @@ public class CursoPersistence {
      * @param id
      * @return cursoEncontrado
      */
-    public CursoEntity find(Long id){
+    public CursoEntity find(int id){
         CursoEntity cursoEncontrado = entityManager.find(CursoEntity.class, id);
         return cursoEncontrado;
     }
@@ -59,7 +59,7 @@ public class CursoPersistence {
      * Metodo que nos permite eliminar un Curso
      * @param id 
      */
-    public void remove(Long id){
+    public void remove(int id){
         CursoEntity cursoEliminar = entityManager.find(CursoEntity.class, id);
         entityManager.remove(cursoEliminar);
     }  
