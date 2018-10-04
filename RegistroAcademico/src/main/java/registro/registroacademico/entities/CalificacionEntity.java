@@ -1,4 +1,3 @@
-
 package registro.registroacademico.entities;
 
 import java.io.Serializable;
