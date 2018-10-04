@@ -68,4 +68,4 @@ public class CoordinadorLogic {
     public void removeCoordinador(int id){
         coordinadorPersistance.remove(id);
     }
-}
+}//class

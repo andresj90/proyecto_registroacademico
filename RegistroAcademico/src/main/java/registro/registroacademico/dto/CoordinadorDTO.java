@@ -5,7 +5,7 @@ import java.util.List;
 import registro.registroacademico.entities.CoordinadorEntity;
 
 /**
- *
+ * Clase que permite hacer la transferencia a objeto 
  * @author AndresJ90
  */
 public class CoordinadorDTO {
@@ -139,8 +139,5 @@ public class CoordinadorDTO {
     public void setNro_documento(Long nro_documento) {
         this.nro_documento = nro_documento;
     }
-     
-    
-    
-
-}
+ 
+}//class
