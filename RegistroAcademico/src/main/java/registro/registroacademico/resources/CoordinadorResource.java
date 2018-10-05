@@ -79,7 +79,7 @@ public class CoordinadorResource {
     
     @PUT 
     @Path("{id_coodinador: \\d+}")
-    public CoordinadorDTO updateCoordinador (@PathParam("id_coordinador") int id,CoordinadorDTO coordinadoractualizar ){
+    public CoordinadorDTO updateCoordinador (@PathParam("id_coordinador") int id,CoordinadorDTO coordinadorActualizar ){
         CoordinadorEntity entity = coordinadorLogic.getCoordinador(id);
         
         if (entity == null) {
@@ -87,7 +87,7 @@ public class CoordinadorResource {
             throw new RuntimeException("El coordinador no existe");
         }
         
-        return new CoordinadorDTO(coordinadorLogic.updateCoordinador(id, coordinadoractualizar.toEntity()));
+        return new CoordinadorDTO(coordinadorLogic.updateCoordinador(id, coordinadorActualizar.toEntity()));
     }
     
     /**
