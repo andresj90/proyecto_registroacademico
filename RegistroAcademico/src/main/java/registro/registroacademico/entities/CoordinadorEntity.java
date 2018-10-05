@@ -1,5 +1,6 @@
 package registro.registroacademico.entities;
 
+import java.io.Serializable;
 import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
@@ -14,7 +15,7 @@ import javax.persistence.ManyToOne;
  */
 
 @Entity(name = "Coordinador")
-public class CoordinadorEntity {
+public class CoordinadorEntity implements Serializable{
    
     /**
      * LLave primaria de la tabla Coordinador
