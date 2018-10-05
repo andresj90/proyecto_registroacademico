@@ -43,7 +43,7 @@ public class ProgramaLogic {
      * @return 
      */
     
-    public ProgramaEntity createPrograma(ProgramaEntity programaEntity){
+    public ProgramaEntity crearPrograma(ProgramaEntity programaEntity){
       programaPersistance.create(programaEntity); 
       return  programaEntity;
     }
