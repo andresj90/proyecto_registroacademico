@@ -49,7 +49,7 @@ public class CoordinadorResource {
      */
     
     @GET 
-    @Path("{id_coodinador:\\d+}")
+    @Path("{id_coodinador: \\d+}")
     public CoordinadorDTO getCoordinador(@PathParam("id_coordinador") int id){
         CoordinadorEntity coordinador = coordinadorLogic.getCoordinador(id); 
         if (coordinador == null) {
@@ -78,7 +78,7 @@ public class CoordinadorResource {
      */
     
     @PUT 
-    @Path("{id_coodinador:\\d+}")
+    @Path("{id_coodinador: \\d+}")
     public CoordinadorDTO updateCoordinador (@PathParam("id_coordinador") int id,CoordinadorDTO coordinadoractualizar ){
         CoordinadorEntity entity = coordinadorLogic.getCoordinador(id);
         
@@ -95,7 +95,7 @@ public class CoordinadorResource {
      * @param id 
      */
     @DELETE
-    @Path("{id_coodinador:\\d+}")
+    @Path("{id_coodinador: \\d+}")
     public void deleteCoordinador(@PathParam("id_coordinador") int id){
         CoordinadorEntity coordinador = coordinadorLogic.getCoordinador(id);
         if (coordinador == null) {
