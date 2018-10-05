@@ -21,9 +21,9 @@ public class ProgramaLogic {
      * Obtener todos los programas
      * @return programa
      */
-    public List<ProgramaEntity> getPrograma(){
-      List<ProgramaEntity> programa = programaPersistance.findAll();
-      return programa;
+    public List<ProgramaEntity> getProgramas(){
+      List<ProgramaEntity> programas = programaPersistance.findAll();
+      return programas;
     }
     
     /**
@@ -34,6 +34,9 @@ public class ProgramaLogic {
     
     public  ProgramaEntity getPrograma(int id){
      ProgramaEntity programa = programaPersistance.find(id);
+     if (programa == null) {
+            throw new IllegalArgumentException("El programa solicitado no existe");
+        }
      return programa;
     }
     
@@ -65,7 +68,7 @@ public class ProgramaLogic {
      * @param id 
      */
     
-    public void removePrograma(int id){
+    public void deletePrograma(int id){
         programaPersistance.remove(id);
     }
 }//class

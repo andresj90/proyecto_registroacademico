@@ -26,9 +26,9 @@ public class TipoProgramaLogic {
      * Obtener todos los tipos de programas
      * @return tipoPrograma 
      */
-    public List<TipoProgramaEntity> getTipo_programa(){
-      List<TipoProgramaEntity> tipoPrograma = tipoProgramaPersistance.findAll();
-      return tipoPrograma;
+    public List<TipoProgramaEntity> getTipo_programas(){
+      List<TipoProgramaEntity> tipoProgramas = tipoProgramaPersistance.findAll();
+      return tipoProgramas;
     }
     
     /**
@@ -39,6 +39,9 @@ public class TipoProgramaLogic {
     
     public  TipoProgramaEntity getTipoPrograma(int id){
      TipoProgramaEntity tipoPrograma = tipoProgramaPersistance.find(id);
+     if (tipoPrograma == null) {
+            throw new IllegalArgumentException("El tipo de programa solicitado no existe");
+        }
      return tipoPrograma;
     }
     
@@ -70,7 +73,7 @@ public class TipoProgramaLogic {
      * @param id 
      */
     
-    public void removeTipoPrograma(int id){
+    public void deleteTipoPrograma(int id){
         tipoProgramaPersistance.remove(id);
     }
 }//class

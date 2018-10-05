@@ -21,9 +21,9 @@ public class CursoLogic {
      * Obtener todos los cursos
      * @return curso
      */
-    public List<CursoEntity> getCurso(){
-      List<CursoEntity> curso = cursoPersistance.findAll();
-      return curso;
+    public List<CursoEntity> getCursos(){
+      List<CursoEntity> cursos = cursoPersistance.findAll();
+      return cursos;
     }
     
     /**
@@ -34,6 +34,9 @@ public class CursoLogic {
     
     public  CursoEntity getCurso(int id){
      CursoEntity curso = cursoPersistance.find(id);
+        if (curso == null) {
+            throw new IllegalArgumentException("El curso solicitado no existe");
+        }
      return curso;
     }
     
@@ -65,7 +68,7 @@ public class CursoLogic {
      * @param id 
      */
     
-    public void removeCurso(int id){
+    public void deleteCurso(int id){
         cursoPersistance.remove(id);
     }
 }//class

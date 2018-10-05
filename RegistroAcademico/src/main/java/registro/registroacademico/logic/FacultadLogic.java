@@ -21,9 +21,9 @@ public class FacultadLogic {
      * Obtener todos las facultades
      * @return facultad
      */
-    public List<FacultadEntity> getFacultad(){
-      List<FacultadEntity> facultad = facultadPersistance.findAll();
-      return facultad;
+    public List<FacultadEntity> getFacultades(){
+      List<FacultadEntity> facultades = facultadPersistance.findAll();
+      return facultades;
     }
     
     /**
@@ -34,6 +34,9 @@ public class FacultadLogic {
     
     public  FacultadEntity getFacultad(int id){
      FacultadEntity facultad = facultadPersistance.find(id);
+     if (facultad == null) {
+            throw new IllegalArgumentException("La facultad solicitado no existe");
+        }
      return facultad;
     }
     
@@ -65,7 +68,7 @@ public class FacultadLogic {
      * @param id 
      */
     
-    public void removeFacultad(int id){
+    public void deleteFacultad(int id){
         facultadPersistance.remove(id);
     }
 }//class
