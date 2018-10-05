@@ -48,7 +48,7 @@ public class TipoProgramaLogic {
      * @return 
      */
     
-    public TipoProgramaEntity crearCoordinador(TipoProgramaEntity tipoProgramaEntity){
+    public TipoProgramaEntity createCoordinador(TipoProgramaEntity tipoProgramaEntity){
       tipoProgramaPersistance.create(tipoProgramaEntity); 
       return  tipoProgramaEntity;
     }
