@@ -43,7 +43,7 @@ public class FacultadLogic {
      * @return 
      */
     
-    public FacultadEntity crearFacultad(FacultadEntity facultadEntity){
+    public FacultadEntity createFacultad(FacultadEntity facultadEntity){
       facultadPersistance.create(facultadEntity); 
       return  facultadEntity;
     }
