@@ -101,6 +101,6 @@ public class CoordinadorResource {
         if (coordinador == null) {
             throw new RuntimeException("El coordinador no existe");
         }
-        coordinadorLogic.removeCoordinador(id);
+        coordinadorLogic.deleteCoordinador(id);
     }
 }//class

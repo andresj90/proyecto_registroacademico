@@ -34,6 +34,9 @@ public class CoordinadorLogic {
     
     public  CoordinadorEntity getCoordinador(int id){
      CoordinadorEntity coordinador = coordinadorPersistance.find(id);
+        if (coordinador == null) {
+            throw new IllegalArgumentException("El coordinador solicitado no existe");
+        }
      return coordinador;
     }
     
@@ -65,7 +68,7 @@ public class CoordinadorLogic {
      * @param id 
      */
     
-    public void removeCoordinador(int id){
+    public void deleteCoordinador(int id){
         coordinadorPersistance.remove(id);
     }
 }//class
