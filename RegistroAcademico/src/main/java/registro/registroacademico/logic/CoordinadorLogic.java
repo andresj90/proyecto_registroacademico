@@ -43,7 +43,7 @@ public class CoordinadorLogic {
      * @return 
      */
     
-    public CoordinadorEntity crearCoordinador(CoordinadorEntity coordinadorEntity){
+    public CoordinadorEntity createCoordinador(CoordinadorEntity coordinadorEntity){
       coordinadorPersistance.create(coordinadorEntity); 
       return  coordinadorEntity;
     }
