@@ -43,7 +43,7 @@ public class CursoLogic {
      * @return 
      */
     
-    public CursoEntity crearCurso(CursoEntity cursoEntity){
+    public CursoEntity createCurso(CursoEntity cursoEntity){
       cursoPersistance.create(cursoEntity); 
       return  cursoEntity;
     }
