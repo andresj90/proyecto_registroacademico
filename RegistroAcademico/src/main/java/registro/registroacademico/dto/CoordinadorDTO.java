@@ -20,6 +20,7 @@ public class CoordinadorDTO {
   private String email; 
   private int tipo_documento_id; 
   private Long nro_documento; 
+  
 
 
   /**
