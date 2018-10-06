@@ -56,7 +56,7 @@ public class CursoGrupoLogic {
      * @return 
      */
     
-    public CursoGrupoEntity updateTipoCurso(int id, CursoGrupoEntity cursoGrupoEntity){
+    public CursoGrupoEntity updateCursoGrupo(int id, CursoGrupoEntity cursoGrupoEntity){
      CursoGrupoEntity cursoGrupo = cursoGrupoPersistence.update(cursoGrupoEntity); 
      return cursoGrupo;
     }
