@@ -47,11 +47,11 @@ public class InscripcionResource {
      */
     
     @GET 
-    @Path("{id_coodinador: \\d+}")
-    public InscripcionDTO getInscripcion(@PathParam("id_coordinador") int id){
+    @Path("{id_inscripcion: \\d+}")
+    public InscripcionDTO getInscripcion(@PathParam("id_inscripcion") int id){
         InscripcionEntity inscripcion = inscripcionLogic.getInscripcion(id); 
         if (inscripcion == null) {
-            throw new RuntimeException("El coordinador no existe");
+            throw new RuntimeException("La inscripcion no existe");
         }
         
         return new InscripcionDTO(inscripcion);
@@ -76,13 +76,13 @@ public class InscripcionResource {
      */
     
     @PUT 
-    @Path("{id_coodinador: \\d+}")
-    public InscripcionDTO updateInscripcion(@PathParam("id_coordinador") int id,InscripcionDTO inscripcionActualizar ){
+    @Path("{id_inscripcion: \\d+}")
+    public InscripcionDTO updateInscripcion(@PathParam("id_inscripcion") int id,InscripcionDTO inscripcionActualizar ){
         InscripcionEntity entity = inscripcionLogic.getInscripcion(id);
         
         if (entity == null) {
             
-            throw new RuntimeException("El coordinador no existe");
+            throw new RuntimeException("La inscripcion no existe");
         }
         
         return new InscripcionDTO(inscripcionLogic.updateInscripcion(id, inscripcionActualizar.toEntity()));
@@ -93,12 +93,12 @@ public class InscripcionResource {
      * @param id 
      */
     @DELETE
-    @Path("{id_coodinador: \\d+}")
-    public void deleteInscripcion(@PathParam("id_coordinador") int id){
+    @Path("{id_inscripcion: \\d+}")
+    public void deleteInscripcion(@PathParam("id_inscripcion") int id){
         InscripcionEntity inscripcion = inscripcionLogic.getInscripcion(id);
         if (inscripcion == null) {
-            throw new RuntimeException("El coordinador no existe");
+            throw new RuntimeException("La inscripcion no existe");
         }
         inscripcionLogic.deleteInscripcion(id);
     }
-}
+}//class
