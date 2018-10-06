@@ -26,7 +26,7 @@ public class TipoProgramaLogic {
      * Obtener todos los tipos de programas
      * @return tipoPrograma 
      */
-    public List<TipoProgramaEntity> getTipo_programas(){
+    public List<TipoProgramaEntity> getTipoProgramas(){
       List<TipoProgramaEntity> tipoProgramas = tipoProgramaPersistance.findAll();
       return tipoProgramas;
     }
@@ -51,7 +51,7 @@ public class TipoProgramaLogic {
      * @return 
      */
     
-    public TipoProgramaEntity createCoordinador(TipoProgramaEntity tipoProgramaEntity){
+    public TipoProgramaEntity createTipoPrograma(TipoProgramaEntity tipoProgramaEntity){
       tipoProgramaPersistance.create(tipoProgramaEntity); 
       return  tipoProgramaEntity;
     }
