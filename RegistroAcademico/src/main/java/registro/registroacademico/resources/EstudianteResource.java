@@ -30,7 +30,7 @@ import registro.registroacademico.logic.EstudianteLogic;
 @Consumes(MediaType.APPLICATION_JSON)
 @Path("/estudiantes")
 public class EstudianteResource {
-     @EJB
+    @EJB
     private EstudianteLogic estudianteLogic; 
     
     /**
@@ -55,7 +55,7 @@ public class EstudianteResource {
     public EstudianteDTO getEstudiante(@PathParam("id_estudiante") int id){
         EstudianteEntity estudiante = estudianteLogic.getEstudiante(id); 
         if (estudiante == null) {
-            throw new RuntimeException("El Estudiante no existe");
+            throw new RuntimeException("El estudiante no existe");
         }
         
         return new EstudianteDTO(estudiante);
@@ -86,7 +86,7 @@ public class EstudianteResource {
         
         if (entity == null) {
             
-            throw new RuntimeException("El coordinador no existe");
+            throw new RuntimeException("El estudiante no existe");
         }
         
         return new EstudianteDTO(estudianteLogic.updateEstudiante(id, estudianteActualizar.toEntity()));

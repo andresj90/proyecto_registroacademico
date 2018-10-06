@@ -50,7 +50,7 @@ public class TipoDocumentoDTO {
      * @return 
      */
     
-    public List<TipoDocumentoDTO> tolistTipoDocumento(List<TipoDocumentoEntity> documentoEntitys){
+    public static List<TipoDocumentoDTO> tolistTipoDocumento(List<TipoDocumentoEntity> documentoEntitys){
         List<TipoDocumentoDTO> listaObjectoTipoDocumentos = new ArrayList<>(); 
         for (int i = 0; i < documentoEntitys.size(); i++) {
             
