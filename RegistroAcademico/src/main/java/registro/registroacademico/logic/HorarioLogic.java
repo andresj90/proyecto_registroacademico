@@ -56,7 +56,7 @@ public class HorarioLogic {
      * @return 
      */
     
-    public HorarioEntity updateHorario(int id, HorarioEntity horarioEntity){
+    public HorarioEntity updateHorario(Long id, HorarioEntity horarioEntity){
      HorarioEntity horario = horarioPersistence.update(horarioEntity); 
      return horario;
     }
@@ -66,7 +66,7 @@ public class HorarioLogic {
      * @param id 
      */
     
-    public void removeHorario(Long id){
+    public void removerHorario(Long id){
         horarioPersistence.delete(id);
     }
 }
