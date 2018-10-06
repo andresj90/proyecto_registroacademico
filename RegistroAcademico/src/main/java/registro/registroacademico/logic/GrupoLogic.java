@@ -56,7 +56,7 @@ public class GrupoLogic {
      * @return 
      */
     
-    public GrupoEntity updateGrupo(int id, GrupoEntity grupoEntity){
+    public GrupoEntity updateGrupo(Long id, GrupoEntity grupoEntity){
      GrupoEntity grupo = grupoPersistence.update(grupoEntity); 
      return grupo;
     }

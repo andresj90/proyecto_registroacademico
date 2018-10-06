@@ -56,7 +56,7 @@ public class HorarioGrupoCursoLogic {
      * @return 
      */
     
-    public HorarioGrupoCursoEntity updateHorarioGrupoCurso(int id, HorarioGrupoCursoEntity horarioGrupoCursoEntity){
+    public HorarioGrupoCursoEntity updateHorarioGrupoCurso(Long id, HorarioGrupoCursoEntity horarioGrupoCursoEntity){
      HorarioGrupoCursoEntity horarioGrupoCurso = horarioGrupoCursoPersistence.update(horarioGrupoCursoEntity); 
      return horarioGrupoCurso;
     }

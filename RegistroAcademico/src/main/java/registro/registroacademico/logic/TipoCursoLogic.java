@@ -56,7 +56,7 @@ public class TipoCursoLogic {
      * @return 
      */
     
-    public TipoCursoEntity updateTipoCurso(int id, TipoCursoEntity tipoCursoEntity){
+    public TipoCursoEntity updateTipoCurso(Long id, TipoCursoEntity tipoCursoEntity){
      TipoCursoEntity tipoCurso = tipoCursoPersistence.update(tipoCursoEntity); 
      return tipoCurso;
     }

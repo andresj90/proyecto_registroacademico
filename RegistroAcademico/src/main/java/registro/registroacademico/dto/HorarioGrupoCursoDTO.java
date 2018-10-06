@@ -55,7 +55,7 @@ public class HorarioGrupoCursoDTO {
      * @return 
      */
     
-    public static List<HorarioGrupoCursoDTO> tolistHorario(List<HorarioGrupoCursoEntity> horarioGrupoCursoEntitys){
+    public static List<HorarioGrupoCursoDTO> tolisthorarioGrupoCurso(List<HorarioGrupoCursoEntity> horarioGrupoCursoEntitys){
         
         List<HorarioGrupoCursoDTO> listaObjectoHorario = new ArrayList<>();
         for (int i = 0; i <horarioGrupoCursoEntitys.size(); i++) {

@@ -72,7 +72,7 @@ public class CursoGrupoDTO {
      * @return 
      */
     
-    public static List<CursoGrupoDTO> tolistHorario(List<CursoGrupoEntity> cursoGrupoEntitys){
+    public static List<CursoGrupoDTO> tolistCursoGrupo(List<CursoGrupoEntity> cursoGrupoEntitys){
         
         List<CursoGrupoDTO> listaObjectoHorario = new ArrayList<>();
         for (int i = 0; i <cursoGrupoEntitys.size(); i++) {

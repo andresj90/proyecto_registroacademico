@@ -57,7 +57,7 @@ public class GrupoDTO {
      * @return 
      */
     
-    public static List<GrupoDTO> tolistHorario(List<GrupoEntity> grupoEntitys){
+    public static List<GrupoDTO> tolistGrupo(List<GrupoEntity> grupoEntitys){
         
         List<GrupoDTO> listaObjectoHorario = new ArrayList<>();
         for (int i = 0; i <grupoEntitys.size(); i++) {

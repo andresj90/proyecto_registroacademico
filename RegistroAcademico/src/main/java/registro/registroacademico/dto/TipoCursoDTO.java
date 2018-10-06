@@ -50,7 +50,7 @@ public class TipoCursoDTO {
      * @return 
      */
     
-    public static List<TipoCursoDTO> tolistHorario(List<TipoCursoEntity> tipoCursoEntitys){
+    public static List<TipoCursoDTO> tolistTipoCurso(List<TipoCursoEntity> tipoCursoEntitys){
         
         List<TipoCursoDTO> listaObjectoHorario = new ArrayList<>();
         for (int i = 0; i <tipoCursoEntitys.size(); i++) {
