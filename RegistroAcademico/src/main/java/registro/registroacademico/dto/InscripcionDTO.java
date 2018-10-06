@@ -58,7 +58,7 @@ public class InscripcionDTO {
      * @return 
      */
    
-    public List<InscripcionDTO> tolistInscripcion(List<InscripcionEntity> inscripcionEntitys){
+    public static List<InscripcionDTO> tolistInscripcion(List<InscripcionEntity> inscripcionEntitys){
         List<InscripcionDTO> listaObjectoInscripcion = new ArrayList<>(); 
         for (int i = 0; i < inscripcionEntitys.size(); i++) {
             
