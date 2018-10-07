@@ -3,6 +3,7 @@ package registro.registroacademico.dto;
 import java.util.ArrayList;
 import java.util.List;
 import registro.registroacademico.entities.CursoEntity;
+import registro.registroacademico.entities.ProgramaEntity;
 
 /**
  * Clase que permite hacer la transferencia a objeto 
@@ -15,7 +16,7 @@ public class CursoDTO {
    */    
   private int id_curso;
   private String nom_curso; 
-  private int programa_id_pr;
+  private ProgramaEntity programa_id_pr;
   
 
   /**
@@ -32,7 +33,7 @@ public class CursoDTO {
     public CursoDTO(CursoEntity CursoEntity) {
         this.id_curso = CursoEntity.getId_curso();
         this.nom_curso = CursoEntity.getNom_curso();
-        this.programa_id_pr = CursoEntity.getPrograma_id_pr();
+        this.programa_id_pr = CursoEntity.getPrograma();
     }
     
     /**
@@ -44,7 +45,7 @@ public class CursoDTO {
         CursoEntity entity = new CursoEntity(); 
         entity.setId_curso(this.id_curso);
         entity.setNom_curso(this.nom_curso);
-        entity.setPrograma_id_pr(this.programa_id_pr);
+        entity.setPrograma(this.programa_id_pr);
         
         return entity;
     }
@@ -87,12 +88,13 @@ public class CursoDTO {
     public void setNom_curso(String nom_curso) {
         this.nom_curso = nom_curso;
     }
-    
-    public int getPrograma_id_pr() {
+
+    public ProgramaEntity getPrograma_id_pr() {
         return programa_id_pr;
     }
 
-    public void setPrograma_id_pr(int programa_id_pr) {
+    public void setPrograma_id_pr(ProgramaEntity programa_id_pr) {
         this.programa_id_pr = programa_id_pr;
     }
-}
+
+}//class

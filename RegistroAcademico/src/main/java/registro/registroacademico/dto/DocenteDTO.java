@@ -3,6 +3,7 @@ package registro.registroacademico.dto;
 import java.util.ArrayList;
 import java.util.List;
 import registro.registroacademico.entities.DocenteEntity;
+import registro.registroacademico.entities.TipoDocumentoEntity;
 
 /**
  * Clase que permite hacer la transferencia a objeto 
@@ -17,7 +18,7 @@ public class DocenteDTO {
   private int id_docente;
   private String nombres; 
   private String apellidos;
-   private int tipo_documento_id; 
+  private TipoDocumentoEntity tipo_documento_id; 
   private Long nro_documento; 
   private String genero; 
   private String email; 
@@ -42,7 +43,7 @@ public class DocenteDTO {
         this.id_docente = docenteEntity.getId_docente();
         this.nombres = docenteEntity.getNombres();
         this.apellidos = docenteEntity.getApellidos();
-        this.tipo_documento_id = docenteEntity.getTipo_documento_id();
+        this.tipo_documento_id = docenteEntity.getTipoDocumento();
         this.nro_documento = docenteEntity.getNro_documento();
         this.genero = docenteEntity.getGenero();
         this.email = docenteEntity.getEmail();
@@ -60,7 +61,7 @@ public class DocenteDTO {
      entity.setId_docente(this.id_docente);
      entity.setNombres(this.nombres);
      entity.setApellidos(this.apellidos);
-     entity.setTipo_documento_id(this.tipo_documento_id);
+     entity.setTipoDocumento(this.tipo_documento_id);
      entity.setNro_documento(this.nro_documento);
      entity.setGenero(this.genero);
      entity.setEmail(this.email);
@@ -114,11 +115,11 @@ public class DocenteDTO {
         this.apellidos = apellidos;
     }
 
-    public int getTipo_documento_id() {
+    public TipoDocumentoEntity getTipo_documento_id() {
         return tipo_documento_id;
     }
 
-    public void setTipo_documento_id(int tipo_documento_id) {
+    public void setTipo_documento_id(TipoDocumentoEntity tipo_documento_id) {
         this.tipo_documento_id = tipo_documento_id;
     }
 
@@ -153,6 +154,5 @@ public class DocenteDTO {
     public void setArea_profundizacion(String area_profundizacion) {
         this.area_profundizacion = area_profundizacion;
     }
-    
-    
-}
+  
+}//class

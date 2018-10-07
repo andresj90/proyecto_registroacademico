@@ -42,7 +42,7 @@ public class ProgramaEntity implements Serializable{
      */
     @ManyToOne
     @JoinColumn(name = "tipo_programa_id", nullable = false)
-    private int tipo_programa_id;
+    private TipoProgramaEntity tipoPrograma;
     
     /**
      * Atributo facultad_id_facultad, este es una llave foranea la cual conecta con 
@@ -50,7 +50,7 @@ public class ProgramaEntity implements Serializable{
      */    
     @ManyToOne
     @JoinColumn (name = "facultad_id_facultad", nullable = false)
-    private int facultad_id_facultad; 
+    private FacultadEntity facultad; 
     
     /**
      * Atributo coordinador_id_coor, este es una llave foranea la cual conecta con 
@@ -58,7 +58,7 @@ public class ProgramaEntity implements Serializable{
      */    
     @ManyToOne
     @JoinColumn (name = "coordinador_id_coor", nullable = false)
-    private int coordinador_id_coor; 
+    private CoordinadorEntity coordinador; 
     
     /**
      * Constructor por defecto
@@ -94,27 +94,27 @@ public class ProgramaEntity implements Serializable{
         this.creditos_programa = creditos_programa;
     }
 
-    public int getTipo_programa_id() {
-        return tipo_programa_id;
+    public TipoProgramaEntity getTipoPrograma() {
+        return tipoPrograma;
     }
 
-    public void setTipo_programa_id(int tipo_programa_id) {
-        this.tipo_programa_id = tipo_programa_id;
+    public void setTipoPrograma(TipoProgramaEntity tipoPrograma) {
+        this.tipoPrograma = tipoPrograma;
     }
 
-    public int getFacultad_id_facultad() {
-        return facultad_id_facultad;
+    public FacultadEntity getFacultad() {
+        return facultad;
     }
 
-    public void setFacultad_id_facultad(int facultad_id_facultad) {
-        this.facultad_id_facultad = facultad_id_facultad;
+    public void setFacultad(FacultadEntity facultad) {
+        this.facultad = facultad;
     }
 
-    public int getCoordinador_id_coor() {
-        return coordinador_id_coor;
+    public CoordinadorEntity getCoordinador() {
+        return coordinador;
     }
 
-    public void setCoordinador_id_coor(int coordinador_id_coor) {
-        this.coordinador_id_coor = coordinador_id_coor;
+    public void setCoordinador(CoordinadorEntity coordinador) {
+        this.coordinador = coordinador;
     }
 }//clase

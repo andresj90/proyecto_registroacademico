@@ -3,6 +3,8 @@ package registro.registroacademico.dto;
 import java.util.ArrayList;
 import java.util.List;
 import registro.registroacademico.entities.EstudianteEntity;
+import registro.registroacademico.entities.ProgramaEntity;
+import registro.registroacademico.entities.TipoDocumentoEntity;
 
 /**
  * Clase que permite hacer la transferencia a objeto 
@@ -15,12 +17,12 @@ public class EstudianteDTO {
   private int id_estudiante;
   private String nombres; 
   private String apellidos;
-  private int tipo_documento_id;
+  private TipoDocumentoEntity tipo_documento_id;
   private Long nro_documento;
   private Long cod_estudiantil;
   private String genero; 
   private String email; 
-  private int programa_id_pr;
+  private ProgramaEntity programa_id_pr;
    
   /**
    * Constructor por defecto
@@ -38,12 +40,12 @@ public class EstudianteDTO {
         this.id_estudiante = estudianteEntity.getId_estudiante();
         this.nombres = estudianteEntity.getNombres();
         this.apellidos = estudianteEntity.getApellidos();
-        this.tipo_documento_id = estudianteEntity.getTipo_documento_id();
+        this.tipo_documento_id = estudianteEntity.getTipoDocumento();
         this.nro_documento = estudianteEntity.getNro_documento();
         this.cod_estudiantil = estudianteEntity.getCod_estudiantil();
         this.genero = estudianteEntity.getGenero();
         this.email = estudianteEntity.getEmail();
-        this.programa_id_pr = estudianteEntity.getPrograma_id_pr();
+        this.programa_id_pr = estudianteEntity.getPrograma();
     }
   
     /**
@@ -57,12 +59,12 @@ public class EstudianteDTO {
       estudianteEntity.setId_estudiante(this.id_estudiante);
       estudianteEntity.setNombres(this.nombres);
       estudianteEntity.setApellidos(this.apellidos);
-      estudianteEntity.setTipo_documento_id(this.tipo_documento_id);
+      estudianteEntity.setTipoDocumento(this.tipo_documento_id);
       estudianteEntity.setNro_documento(this.nro_documento);
       estudianteEntity.setCod_estudiantil(this.cod_estudiantil);
       estudianteEntity.setGenero(this.genero);
       estudianteEntity.setEmail(this.email);
-      estudianteEntity.setPrograma_id_pr(this.programa_id_pr);
+      estudianteEntity.setPrograma(this.programa_id_pr);
       
       return estudianteEntity;
   }
@@ -113,11 +115,11 @@ public class EstudianteDTO {
         this.apellidos = apellidos;
     }
 
-    public int getTipo_documento_id() {
+    public TipoDocumentoEntity getTipo_documento_id() {
         return tipo_documento_id;
     }
 
-    public void setTipo_documento_id(int tipo_documento_id) {
+    public void setTipo_documento_id(TipoDocumentoEntity tipo_documento_id) {
         this.tipo_documento_id = tipo_documento_id;
     }
 
@@ -153,12 +155,12 @@ public class EstudianteDTO {
         this.email = email;
     }
 
-    public int getPrograma_id_pr() {
+    public ProgramaEntity getPrograma_id_pr() {
         return programa_id_pr;
     }
 
-    public void setPrograma_id_pr(int programa_id_pr) {
+    public void setPrograma_id_pr(ProgramaEntity programa_id_pr) {
         this.programa_id_pr = programa_id_pr;
     }
- 
+
 }//class

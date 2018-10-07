@@ -3,6 +3,7 @@ package registro.registroacademico.dto;
 import java.util.ArrayList;
 import java.util.List;
 import registro.registroacademico.entities.CoordinadorEntity;
+import registro.registroacademico.entities.TipoDocumentoEntity;
 
 /**
  * Clase que permite hacer la transferencia a objeto 
@@ -18,7 +19,7 @@ public class CoordinadorDTO {
   private String apellidos;
   private String genero; 
   private String email; 
-  private int tipo_documento_id; 
+  private TipoDocumentoEntity tipo_documento_id; 
   private Long nro_documento; 
   
 
@@ -40,7 +41,7 @@ public class CoordinadorDTO {
         this.apellidos = coordinadorEntity.getApellidos();
         this.genero = coordinadorEntity.getGenero();
         this.email = coordinadorEntity.getEmail();
-        this.tipo_documento_id = coordinadorEntity.getTipo_documento_id();
+        this.tipo_documento_id = coordinadorEntity.getTipoDocumento();
         this.nro_documento = coordinadorEntity.getNro_documento();
     }
     
@@ -57,7 +58,7 @@ public class CoordinadorDTO {
         entity.setApellidos(this.apellidos);
         entity.setGenero(this.genero);
         entity.setEmail(this.email);
-        entity.setTipo_documento_id(this.tipo_documento_id);
+        entity.setTipoDocumento(tipo_documento_id);
         entity.setNro_documento(this.nro_documento);
         
         return entity;
@@ -125,11 +126,11 @@ public class CoordinadorDTO {
         this.email = email;
     }
 
-    public int getTipo_documento_id() {
+    public TipoDocumentoEntity getTipo_documento_id() {
         return tipo_documento_id;
     }
 
-    public void setTipo_documento_id(int tipo_documento_id) {
+    public void setTipo_documento_id(TipoDocumentoEntity tipo_documento_id) {
         this.tipo_documento_id = tipo_documento_id;
     }
 

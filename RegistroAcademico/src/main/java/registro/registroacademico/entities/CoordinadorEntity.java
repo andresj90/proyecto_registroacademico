@@ -45,7 +45,7 @@ public class CoordinadorEntity implements Serializable{
     
     @ManyToOne
     @JoinColumn (name = "tipo_documento_id", nullable = false)
-    private int tipo_documento_id;
+    private TipoDocumentoEntity tipoDocumento;
      
     /**
      * Atributo nro_documento de la tabla Docente 
@@ -103,12 +103,12 @@ public class CoordinadorEntity implements Serializable{
         this.apellidos = apellidos;
     }
 
-    public int getTipo_documento_id() {
-        return tipo_documento_id;
+    public TipoDocumentoEntity getTipoDocumento() {
+        return tipoDocumento;
     }
 
-    public void setTipo_documento_id(int tipo_documento_id) {
-        this.tipo_documento_id = tipo_documento_id;
+    public void setTipoDocumento(TipoDocumentoEntity tipoDocumento) {
+        this.tipoDocumento = tipoDocumento;
     }
 
     public Long getNro_documento() {
@@ -134,8 +134,5 @@ public class CoordinadorEntity implements Serializable{
     public void setEmail(String email) {
         this.email = email;
     }
-    
-    
-    
-    
+
 }//class

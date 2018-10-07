@@ -30,8 +30,8 @@ public class InscripcionEntity implements Serializable{
      */
     
     @ManyToOne
-    @JoinColumn(name = "curso_grupo_id", nullable = false)
-    private int curso_grupo_id;
+    @JoinColumn(name = "id_curso_grupo", nullable = false)
+    private CursoGrupoEntity curso_grupo;
     
     /**
      * Atributo estudiante_id_est, este es una llave foranea la cual conecta con 
@@ -39,7 +39,7 @@ public class InscripcionEntity implements Serializable{
      */    
     @ManyToOne
     @JoinColumn (name = "estudiante_id_est", nullable = false)
-    private int estudiante_id_est; 
+    private EstudianteEntity estudiante; 
     
     /**
      * Constructor por defecto
@@ -47,12 +47,11 @@ public class InscripcionEntity implements Serializable{
 
     public InscripcionEntity() {
     }
- 
-
+    
     /**
      * ------------- METODOS GET Y SET -------------- 
      */
-    
+  
     public int getId_inscripcion() {
         return id_inscripcion;
     }
@@ -61,21 +60,19 @@ public class InscripcionEntity implements Serializable{
         this.id_inscripcion = id_inscripcion;
     }
 
-    public int getCurso_grupo_id() {
-        return curso_grupo_id;
+    public CursoGrupoEntity getCurso_grupo() {
+        return curso_grupo;
     }
 
-    public void setCurso_grupo_id(int curso_grupo_id) {
-        this.curso_grupo_id = curso_grupo_id;
+    public void setCurso_grupo(CursoGrupoEntity curso_grupo) {
+        this.curso_grupo = curso_grupo;
     }
 
-    public int getEstudiante_id_est() {
-        return estudiante_id_est;
+    public EstudianteEntity getEstudiante() {
+        return estudiante;
     }
 
-    public void setEstudiante_id_est(int estudiante_id_est) {
-        this.estudiante_id_est = estudiante_id_est;
+    public void setEstudiante(EstudianteEntity estudiante) {
+        this.estudiante = estudiante;
     }
-    
-    
 }//clase  

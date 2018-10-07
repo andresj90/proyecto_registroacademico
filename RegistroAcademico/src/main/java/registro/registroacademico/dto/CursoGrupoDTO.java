@@ -22,12 +22,12 @@ public class CursoGrupoDTO {
     /**
    * Lista de atributos que hacen referencia al objeto curso Grupo
    */
-  private Long idCursoGrupo;
+  private int idCursoGrupo;
   private CursoEntity cursoIdCur;
   private GrupoEntity grupoIdGr;
   private DocenteEntity docenteIdGr;
   private TipoCursoEntity tipoCursoId;
-  private Long cupoGrupo;
+  private int cupoGrupo;
   /**
    * Constructor por defecto
    */  
@@ -85,11 +85,11 @@ public class CursoGrupoDTO {
      * Métodos GET Y SET
      * @return 
      */
-    public Long getIdCursoGrupo() {
+    public int getIdCursoGrupo() {
         return idCursoGrupo;
     }
 
-    public void setIdCursoGrupo(Long idCursoGrupo) {
+    public void setIdCursoGrupo(int idCursoGrupo) {
         this.idCursoGrupo = idCursoGrupo;
     }
 
@@ -125,11 +125,11 @@ public class CursoGrupoDTO {
         this.tipoCursoId = tipoCursoId;
     }
 
-    public Long getCupoGrupo() {
+    public int getCupoGrupo() {
         return cupoGrupo;
     }
 
-    public void setCupoGrupo(Long cupoGrupo) {
+    public void setCupoGrupo(int cupoGrupo) {
         this.cupoGrupo = cupoGrupo;
     }
 

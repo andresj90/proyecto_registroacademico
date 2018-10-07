@@ -3,6 +3,8 @@ package registro.registroacademico.dto;
 import java.util.ArrayList;
 import java.util.List;
 import registro.registroacademico.entities.CalificacionEntity;
+import registro.registroacademico.entities.CursoGrupoEntity;
+import registro.registroacademico.entities.EstudianteEntity;
 
 /**
  * Clase que permite hacer la transferencia a objeto 
@@ -15,8 +17,8 @@ public class CalificacionDTO {
    */   
     
     private int id_calificacion;
-    private int curso_grupo_id;
-    private int estudiante_id_est; 
+    private CursoGrupoEntity curso_grupo_id;
+    private EstudianteEntity estudiante_id_est; 
     private float valor_nota; 
 
    /**
@@ -35,8 +37,8 @@ public class CalificacionDTO {
     
     public CalificacionDTO(CalificacionEntity calificacionEntity) {
         this.id_calificacion = calificacionEntity.getId_calificacion();
-        this.curso_grupo_id = calificacionEntity.getCurso_grupo_id();
-        this.estudiante_id_est = calificacionEntity.getEstudiante_id_est();
+        this.curso_grupo_id = calificacionEntity.getCursoGrupo();
+        this.estudiante_id_est = calificacionEntity.getEstudiante();
         this.valor_nota = calificacionEntity.getValor_nota();
     }
     
@@ -50,8 +52,8 @@ public class CalificacionDTO {
      CalificacionEntity entity = new CalificacionEntity();
      
      entity.setId_calificacion(id_calificacion);
-     entity.setCurso_grupo_id(curso_grupo_id);
-     entity.setEstudiante_id_est(estudiante_id_est);
+     entity.setCursoGrupo(this.curso_grupo_id);
+     entity.setEstudiante(this.estudiante_id_est);
      entity.setValor_nota(valor_nota);
              
      return entity;
@@ -83,19 +85,19 @@ public class CalificacionDTO {
         this.id_calificacion = id_calificacion;
     }
 
-    public int getCurso_grupo_id() {
+    public CursoGrupoEntity getCurso_grupo_id() {
         return curso_grupo_id;
     }
 
-    public void setCurso_grupo_id(int curso_grupo_id) {
+    public void setCurso_grupo_id(CursoGrupoEntity curso_grupo_id) {
         this.curso_grupo_id = curso_grupo_id;
     }
 
-    public int getEstudiante_id_est() {
+    public EstudianteEntity getEstudiante_id_est() {
         return estudiante_id_est;
     }
 
-    public void setEstudiante_id_est(int estudiante_id_est) {
+    public void setEstudiante_id_est(EstudianteEntity estudiante_id_est) {
         this.estudiante_id_est = estudiante_id_est;
     }
 

@@ -69,4 +69,4 @@ public class HorarioGrupoCursoEntity implements Serializable{
     public void setHorarioId(HorarioEntity horarioId) {
         this.horarioId = horarioId;
     }
-}
+}//class

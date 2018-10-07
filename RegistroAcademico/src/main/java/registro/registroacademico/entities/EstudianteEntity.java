@@ -46,7 +46,7 @@ public class EstudianteEntity implements Serializable{
     
     @ManyToOne
     @JoinColumn (name = "tipo_documento_id", nullable = false)
-    private int tipo_documento_id;
+    private TipoDocumentoEntity tipoDocumento;
     
     /**
      * Atributo nro_documento de la tabla Estudinate 
@@ -83,7 +83,7 @@ public class EstudianteEntity implements Serializable{
     
     @ManyToOne
     @JoinColumn (name = "programa_id_pr", nullable = false)
-    private int programa_id_pr;
+    private ProgramaEntity programa;
     
     /**
      * Constructor por defecto
@@ -120,12 +120,12 @@ public class EstudianteEntity implements Serializable{
         this.apellidos = apellidos;
     }
 
-    public int getTipo_documento_id() {
-        return tipo_documento_id;
+    public TipoDocumentoEntity getTipoDocumento() {
+        return tipoDocumento;
     }
 
-    public void setTipo_documento_id(int tipo_documento_id) {
-        this.tipo_documento_id = tipo_documento_id;
+    public void setTipoDocumento(TipoDocumentoEntity tipoDocumento) {
+        this.tipoDocumento = tipoDocumento;
     }
 
     public Long getNro_documento() {
@@ -160,13 +160,12 @@ public class EstudianteEntity implements Serializable{
         this.email = email;
     }
 
-    public int getPrograma_id_pr() {
-        return programa_id_pr;
+    public ProgramaEntity getPrograma() {
+        return programa;
     }
 
-    public void setPrograma_id_pr(int programa_id_pr) {
-        this.programa_id_pr = programa_id_pr;
+    public void setPrograma(ProgramaEntity programa) {
+        this.programa = programa;
     }
-   
-    
+
 }//class

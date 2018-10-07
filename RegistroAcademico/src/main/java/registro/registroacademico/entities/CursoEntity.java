@@ -36,7 +36,7 @@ public class CursoEntity implements Serializable{
     
     @ManyToOne
     @JoinColumn (name = "programa_id_pr", nullable = false)
-    private int programa_id_pr;
+    private ProgramaEntity programa;
     
     /**
      * Constructor de la clase Curso
@@ -63,11 +63,11 @@ public class CursoEntity implements Serializable{
         this.nom_curso = nom_curso;
     }
 
-    public int getPrograma_id_pr() {
-        return programa_id_pr;
+    public ProgramaEntity getPrograma() {
+        return programa;
     }
 
-    public void setPrograma_id_pr(int programa_id_pr) {
-        this.programa_id_pr = programa_id_pr;
-    }   
+    public void setPrograma(ProgramaEntity programa) {
+        this.programa = programa;
+    }
 }//class

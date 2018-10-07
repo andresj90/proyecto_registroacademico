@@ -26,7 +26,7 @@ public class CursoGrupoEntity implements Serializable{
     @Id
     @Column (name = "id_curso_grupo")
     @GeneratedValue (strategy = GenerationType.AUTO)
-    private Long idCursoGrupo;
+    private int idCursoGrupo;
     
     /**
      * Llave Foranea con la Entidad Curso
@@ -60,17 +60,17 @@ public class CursoGrupoEntity implements Serializable{
      * Variable que almacena el cupo del grupo.
      */
     @Column (name = "cupo_grupo")
-    private Long cupoGrupo;
+    private int cupoGrupo;
     
     /**
      * Métodos GET Y SET
      * @return 
      */
-    public Long getIdCursoGrupo() {
+    public int getIdCursoGrupo() {
         return idCursoGrupo;
     }
 
-    public void setIdCursoGrupo(Long idCursoGrupo) {
+    public void setIdCursoGrupo(int idCursoGrupo) {
         this.idCursoGrupo = idCursoGrupo;
     }
 
@@ -106,11 +106,11 @@ public class CursoGrupoEntity implements Serializable{
         this.tipoCursoId = tipoCursoId;
     }
 
-    public Long getCupoGrupo() {
+    public int getCupoGrupo() {
         return cupoGrupo;
     }
 
-    public void setCupoGrupo(Long cupoGrupo) {
+    public void setCupoGrupo(int cupoGrupo) {
         this.cupoGrupo = cupoGrupo;
     }    
-}
+}//class
