@@ -21,5 +21,19 @@ public class ApplicationConfig extends Application{
     
     private void addResourcesClasses(Set<Class<?>> resources){
         resources.add(CoordinadorResource.class);
+        resources.add(EstudianteResource.class);
+        resources.add(DocenteResource.class);
+        resources.add(InscripcionResource.class);
+        resources.add(CalificacionResource.class);
+        resources.add(TipoCursoResource.class);
+        resources.add(ProgramaResource.class);
+        resources.add(TipoProgramaResource.class);
+        resources.add(FacultadResource.class);
+        resources.add(CursoResource.class);
+        resources.add(GrupoResource.class);
+        resources.add(TipoCursoResource.class);
+        resources.add(CursoGrupoResource.class);
+        resources.add(HorarioResource.class);
+        resources.add(HorarioGrupoCursoResource.class);
     }
 }
