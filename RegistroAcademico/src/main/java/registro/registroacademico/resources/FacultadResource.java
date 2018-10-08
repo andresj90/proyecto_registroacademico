@@ -24,7 +24,7 @@ import registro.registroacademico.logic.FacultadLogic;
 
 @Produces(MediaType.APPLICATION_JSON)
 @Consumes(MediaType.APPLICATION_JSON)
-@Path("/facultad")
+@Path("/facultades")
 public class FacultadResource {
     
     @EJB

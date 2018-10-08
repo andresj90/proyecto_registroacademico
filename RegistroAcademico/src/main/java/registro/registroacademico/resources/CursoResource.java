@@ -24,7 +24,7 @@ import registro.registroacademico.logic.CursoLogic;
 
 @Produces(MediaType.APPLICATION_JSON)
 @Consumes(MediaType.APPLICATION_JSON)
-@Path("/curso")
+@Path("/cursos")
 public class CursoResource {
     
     @EJB

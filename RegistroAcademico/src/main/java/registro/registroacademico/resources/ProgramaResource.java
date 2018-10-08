@@ -24,7 +24,7 @@ import registro.registroacademico.logic.ProgramaLogic;
 
 @Produces(MediaType.APPLICATION_JSON)
 @Consumes(MediaType.APPLICATION_JSON)
-@Path("/programa")
+@Path("/programas")
 public class ProgramaResource {
     
     @EJB

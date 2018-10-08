@@ -1,6 +1,7 @@
 package registro.registroacademico.persistence;
 
 import java.util.List;
+import javax.ejb.Stateless;
 import javax.persistence.EntityManager;
 import javax.persistence.PersistenceContext;
 import javax.persistence.Query;
@@ -10,6 +11,7 @@ import registro.registroacademico.entities.TipoDocumentoEntity;
  * Clase creada para maneejar la transaccionalidad de la entidad TipoDocumento
  * @author AndresJ90
  */
+@Stateless
 public class TipoDocumentoPersistence {
     
      //personalizamos el entity manager

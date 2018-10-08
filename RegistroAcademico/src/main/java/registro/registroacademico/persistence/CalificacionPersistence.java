@@ -1,8 +1,3 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
 package registro.registroacademico.persistence;
 
 import java.util.List;
@@ -16,6 +11,7 @@ import registro.registroacademico.entities.CalificacionEntity;
  * Clase creada para maneejar la transaccionalidad de la entidad Calificacion
  * @author AndresJ90
  */
+
 @Stateless
 public class CalificacionPersistence {
     
@@ -31,7 +27,7 @@ public class CalificacionPersistence {
     
     public List<CalificacionEntity> findAll(){
         
-        Query todos = entityManager.createQuery("Select c from Calificacion c");
+        Query todos = entityManager.createQuery("Select c from CalificacionEntity c");
         return todos.getResultList();
     }
     
@@ -78,4 +74,4 @@ public class CalificacionPersistence {
          CalificacionEntity calificacionEliminar = entityManager.find(CalificacionEntity.class, id);
          entityManager.remove(calificacionEliminar);
      }
-}
+}//class

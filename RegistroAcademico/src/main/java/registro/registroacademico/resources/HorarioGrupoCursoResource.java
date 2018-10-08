@@ -22,7 +22,7 @@ import javax.ws.rs.core.MediaType;
  */
 @Produces(MediaType.APPLICATION_JSON)
 @Consumes(MediaType.APPLICATION_JSON)
-@Path("/horariogrupocurso")
+@Path("/horariogrupocursos")
 public class HorarioGrupoCursoResource {
     
     @EJB

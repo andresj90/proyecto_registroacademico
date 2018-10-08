@@ -25,7 +25,7 @@ public class ApplicationConfig extends Application{
         resources.add(DocenteResource.class);
         resources.add(InscripcionResource.class);
         resources.add(CalificacionResource.class);
-        resources.add(TipoCursoResource.class);
+        resources.add(TipoDocumentoResource.class);
         resources.add(ProgramaResource.class);
         resources.add(TipoProgramaResource.class);
         resources.add(FacultadResource.class);
