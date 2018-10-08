@@ -69,4 +69,4 @@ public class HorarioGrupoCursoLogic {
     public void removeHorarioGrupoCurso(Long id){
         horarioGrupoCursoPersistence.delete(id);
     }
-}
+}//class
