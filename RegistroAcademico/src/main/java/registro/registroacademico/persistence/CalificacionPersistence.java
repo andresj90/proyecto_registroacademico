@@ -27,7 +27,7 @@ public class CalificacionPersistence {
     
     public List<CalificacionEntity> findAll(){
         
-        Query todos = entityManager.createQuery("Select c from CalificacionEntity c");
+        Query todos = entityManager.createQuery("Select c from Calificacion c");
         return todos.getResultList();
     }
     

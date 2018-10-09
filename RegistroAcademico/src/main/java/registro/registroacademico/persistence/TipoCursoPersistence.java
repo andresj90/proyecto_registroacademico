@@ -23,7 +23,7 @@ public class TipoCursoPersistence {
      * @return Lista de datos de la tabla TipoCurso
      */
     public List<TipoCursoEntity> findAll() {
-        Query todos = em.createQuery("select e from TipoCursoEntity e");
+        Query todos = em.createQuery("select t from Tipo_Curso t");
         return todos.getResultList();
     }
 

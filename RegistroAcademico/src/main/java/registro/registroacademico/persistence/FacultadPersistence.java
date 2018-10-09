@@ -25,7 +25,7 @@ public class FacultadPersistence {
      * @return lista de facultades
      */
     public List<FacultadEntity> findAll(){
-        Query todos = entityManager.createQuery("select f from FacultadEntity f");
+        Query todos = entityManager.createQuery("select f from Facultad f");
         return todos.getResultList();
     }
     /**

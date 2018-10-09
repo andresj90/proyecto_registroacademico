@@ -24,7 +24,7 @@ public class GrupoPersistence {
      * @return Lista de datos de la tabla Grupo
      */
     public List<GrupoEntity> findAll() {
-        Query todos = em.createQuery("select e from GrupoEntity e");
+        Query todos = em.createQuery("select g from Grupo g");
         return todos.getResultList();
     }
 

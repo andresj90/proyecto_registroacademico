@@ -25,7 +25,7 @@ public class CursoPersistence {
      * @return lista de Cursos
      */
     public List<CursoEntity> findAll(){
-        Query todos = entityManager.createQuery("select c from CursoEntity c");
+        Query todos = entityManager.createQuery("select c from Curso c");
         return todos.getResultList();
     }
     /**

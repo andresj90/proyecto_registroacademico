@@ -23,7 +23,7 @@ public class CursoGrupoPersistence {
      * @return Lista de datos de la tabla CursoGrupo
      */
     public List<CursoGrupoEntity> findAll() {
-        Query todos = em.createQuery("select e from CursoGrupoEntity e");
+        Query todos = em.createQuery("select c from Curso_Grupo c");
         return todos.getResultList();
     }
 

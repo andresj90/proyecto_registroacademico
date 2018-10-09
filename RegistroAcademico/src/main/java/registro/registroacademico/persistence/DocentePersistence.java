@@ -26,7 +26,7 @@ public class DocentePersistence {
     
     public List<DocenteEntity> findAll(){
         
-        Query todos = entityManager.createQuery("Select d from DocenteEntity d");
+        Query todos = entityManager.createQuery("Select d from Docente d");
         return todos.getResultList();
     }
     

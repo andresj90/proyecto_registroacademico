@@ -25,7 +25,7 @@ public class TipoProgramaPersistence {
      * @return lista de tipo programa
      */
     public List<TipoProgramaEntity> findAll(){
-        Query todos = entityManager.createQuery("select tp from TipoProgramaEntity tp");
+        Query todos = entityManager.createQuery("select tp from Tipo_Programa tp");
         return todos.getResultList();
     }
     /**

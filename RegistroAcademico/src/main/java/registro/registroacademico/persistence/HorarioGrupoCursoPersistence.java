@@ -23,7 +23,7 @@ public class HorarioGrupoCursoPersistence {
      * @return Lista de datos de la tabla HorarioGrupoCurso
      */
     public List<HorarioGrupoCursoEntity> findAll() {
-        Query todos = em.createQuery("select e from HorarioGrupoCursoEntity e");
+        Query todos = em.createQuery("select e from Horario_Grupo_Curso e");
         return todos.getResultList();
     }
 
