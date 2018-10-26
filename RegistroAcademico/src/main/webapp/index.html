@@ -1,10 +1,71 @@
 <!DOCTYPE html>
 <html>
     <head>
-        <title>Home</title>
+
+        <title>Home - Registro Academico</title>
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+        <link href="css2/bootstrap.css" rel="stylesheet" type="text/css" />
+        <link href="css2/bootstrap-theme.min.css" rel="stylesheet" type="text/css" />
+        <style>
+            body {
+                height: 100%;
+                margin: 0;
+                background-image: url("./imgenes/registrofondo.jpg");
+                background-repeat: no-repeat, repeat;
+                background-size: cover;
+            }
+
+            .cuerpo {
+                background: rgba(192,192,192,0.7);
+            }   
+        </style>
     </head>
     <body>
-        <h1>Hello World!</h1>
+
+        <nav class="navbar navbar-expand-lg navbar-dark bg-primary">
+            <a class="navbar-brand" href="#">Registro Academico</a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarColor01" aria-controls="navbarColor01" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <div class="collapse navbar-collapse" id="navbarColor01">
+                <ul class="navbar-nav mr-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="evsp.html">Estudiante</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="evsp.html">Docente</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="servidorAplicaciones.html">Programa</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="mvc.html">Inscripcion</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="modelo.html">Calificacion</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="vista.html">Curso Grupo</a>
+                    </li>
+                </ul>
+            </div>
+        </nav>
+        <br>
+        <div class="container-fluid">
+            <div class="cuerpo">
+                <br>
+                <div class="row">
+                    <div class="col-md-2"></div>
+                    <div class="col-md-8">
+                        <div class="jumbotron">
+                            <h1 class="display-3">Registro Academico</h1>
+                            <p class="lead">La Plataforma de Registro Académico es el sistema en el cual los estudiantes activos de nuestra institución pueden consultar sus notas, inscribir sus asignaturas y hacer modificaciones al registro en los tiempos determinados para tal fin.</p>
+                            <hr class="my-4">
+                        </div>
+                    </div>
+                </div>
+            </div> 
+        </div>
     </body>
 </html>
