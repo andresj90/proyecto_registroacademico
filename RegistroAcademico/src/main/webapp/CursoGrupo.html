@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<!--
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+-->
+<html>
+    <head>
+        <title>Registrar nuevo producto</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link href="css/bootstrap.css" rel="stylesheet" type="text/css" />
+        <link href="css/bootstrap-theme.min.css" rel="stylesheet" type="text/css" />
+        <style>
+            body {
+                height: 100%;
+                margin: 0;
+                background-image: url("./imgenes/registrofondo.jpg");
+                background-repeat: no-repeat, repeat;
+                background-size: cover;
+            }
+
+            .cuerpo {
+                background: rgba(192,192,192,0.7);
+            }   
+            h1 {
+                padding-top: 1em;
+                font-weight: bolder;
+                text-align: center;
+            }
+        </style>
+    </head>
+    <body>
+        <div class="container-fluid">
+            <h1>GRUPO CURSO</h1>
+            <div class="row">
+                <div class="col-xs-6 col-xs-offset-3" style="padding-top: 3em">
+                    <div class="panel panel-primary">
+                        <div class="panel-heading">
+                            <h3 class="panel-title text-center">Información curso y grupo</h3>
+                        </div>
+                        <div class="panel-body">
+                            <form>
+                                <div class="col-xs-6">
+                                    <div class="form-group">
+                                        <label>Curso</label>
+                                        <input type="text" class="form-control" placeholder="Nombre Curso" name="nombre_curso" required>
+                                    </div>
+                                </div>
+                                <div class="col-xs-6">
+                                    <div class="form-group">
+                                        <label>Grupo</label>
+                                        <input type="number" class="form-control" required placeholder="Nombre Grupo" name="nombre_grupo">
+                                    </div>
+                                </div>
+                                <div class="col-xs-6">
+                                    <div class="form-group">
+                                        <label>Docente</label>
+                                        <input type="text" class="form-control" required placeholder="Docente" name="docente">
+                                    </div>
+                                </div>
+                                <div class="col-xs-6">
+                                    <div class="form-group">
+                                        <label>Cupo</label>
+                                        <input type="text" class="form-control" required placeholder="Cupo" name="cupo">
+                                    </div>
+                                </div>
+                                <div class="col-xs-6">
+                                     <div class="form-group">
+                                        <label>Tipo Curso</label>
+                                        <select class="form-control" required name="tipo_curso">
+                                            <option value="">Seleccione...</option>
+                                            <option>Seleccione...</option>
+                                        </select>
+                                    </div>
+                                </div>
+                                <div class="col-xs-12">
+                                    <div class="form-group text-center">
+                                        <button type="reset" class="btn btn-default">Cancelar</button>
+                                        <button type="submit" class="btn btn-primary">Guardar</button>
+                                    </div>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </body>
+</html>
