@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<!--
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+-->
+<html>
+    <head>
+        <title>Registrar nuevo producto</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link href="css/bootstrap.css" rel="stylesheet" type="text/css" />
+        <link href="css/bootstrap-theme.min.css" rel="stylesheet" type="text/css" />
+        <style>
+            body {
+                height: 100%;
+                margin: 0;
+                background-image: url("./imgenes/registrofondo.jpg");
+                background-repeat: no-repeat, repeat;
+                background-size: cover;
+            }
+
+            .cuerpo {
+                background: rgba(192,192,192,0.7);
+            }   
+            h1 {
+                padding-top: 1em;
+                font-weight: bolder;
+                text-align: center;
+            }
+        </style>
+    </head>
+     <body>
+        <div class="container-fluid">
+            <h1>Crear Horario</h1>
+            <div class="row">
+                <div class="col-xs-6 col-xs-offset-3" style="padding-top: 3em">
+                    <div class="panel panel-primary">
+                        <div class="panel-heading">
+                            <h3 class="panel-title text-center">Información Horario</h3>
+                        </div>
+                        <div class="panel-body">
+                            <form>
+                                <div class="col-xs-6">
+                                     <div class="form-group">
+                                        <label>Dia</label>
+                                        <select class="form-control" required name="dia">
+                                            <option value="">-Seleccione-</option>
+                                            <option>Lunes</option>
+                                            <option>Martes</option>
+                                            <option>Miercoles</option>
+                                            <option>Jueves</option>
+                                            <option>Viernes</option>
+                                            <option>Sabado</option>
+                                        </select>
+                                    </div>
+                                </div>
+                                <div class="col-xs-6">
+                                    <div class="form-group">
+                                        <label>Hora Inicio</label>
+                                        <input type="time" class="form-control" required placeholder="Hora Inicio" name="hora_inicio">
+                                    </div>
+                                </div>
+                                <div class="col-xs-6">
+                                    <div class="form-group">
+                                        <label>Hora Fin</label>
+                                        <input type="time" class="form-control" required placeholder="Hora Fin" name="hora_fin">
+                                    </div>
+                                </div>
+                                <div class="col-xs-12">
+                                    <div class="form-group text-center">
+                                        <button type="reset" class="btn btn-default">Cancelar</button>
+                                        <button type="submit" class="btn btn-primary">Guardar</button>
+                                    </div>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </body>
+</html>
