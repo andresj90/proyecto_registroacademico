@@ -7,18 +7,7 @@ app.config(["$stateProvider", "$urlRouterProvider", function ($stateProvider, $u
         
         //Por cada ruta se crea un nuevo estado
         
-        $stateProvider.state("mainPage", {
-            
-            url: '/' , 
-            
-            views:{
-                
-                mainView:{
-                    
-                   templateUrl : 'index.html'
-                }
-            }
-        });
+ 
         
          $stateProvider.state("crearActualizarHorario", {
            url: '/horario' ,

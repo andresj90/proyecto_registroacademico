@@ -40,7 +40,7 @@ TipoCursoModule.controller('crearTipoCursoCtrl', ['$scope', '$http', '$state', f
                     //Reinicia la vaariable
                     $scope.tipoCurso = {};
                     // Nombre de la ruta definida en routes
-                    $state.go('');
+                    $state.go('mainPage');
                 }, function(error){
                     console.log(error);
                 });
