@@ -1,3 +1,5 @@
+/* global horario */
+
 var HorarioModule = angular.module('HorarioModule');
 
 HorarioModule.controller('crearHorarioCtrl', ['$scope', '$http', '$state', function ($scope, $http, $state) {
@@ -19,7 +21,7 @@ HorarioModule.controller('crearHorarioCtrl', ['$scope', '$http', '$state', funct
                     //Reinicia la vaariable
                     $scope.horario = {};
                     // Nombre de la ruta definida en routes
-                    $state.go('listarHorario');
+                    $state.go('crearActualizarHorario');
                 }, function (error) {
                     console.log(error);
                 });
@@ -32,12 +34,12 @@ HorarioModule.controller('crearHorarioCtrl', ['$scope', '$http', '$state', funct
                     //Reinicia la vaariable
                     $scope.horario = {};
                     // Nombre de la ruta definida en routes
-                    $state.go('listarHorario');
+                    $state.go('crearActualizarHorario');
                 }, function(error){
                     console.log(error);
                 });
             }
-        }
+        };
     }]);
 
 
