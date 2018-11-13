@@ -4,6 +4,12 @@ var HorarioModule = angular.module('HorarioModule');
 
 HorarioModule.controller('crearHorarioCtrl', ['$scope', '$http', '$state', function ($scope, $http, $state) {
         var id = $state.params.id;
+        
+       $scope.convertirAPalabra = function (dato){
+                
+                return dato.toString();
+       }
+
 
         $scope.horario = {};
 
@@ -16,12 +22,12 @@ HorarioModule.controller('crearHorarioCtrl', ['$scope', '$http', '$state', funct
         }
 
         $scope.crearHorario = function () {
-            if ($scope.horario.dia && $scope.horario.hora_inicio && horario.hora_finalizacion) {
+            if ($scope.horario.dia && $scope.horario.hora_inicio && $scope.horario.hora_finalizacion) {
                 $http.post('api/horarios', JSON.stringify($scope.horario)).then(function (response) {
                     //Reinicia la vaariable
                     $scope.horario = {};
                     // Nombre de la ruta definida en routes
-                    $state.go('crearActualizarHorario');
+                    $state.go('mainPage');
                 }, function (error) {
                     console.log(error);
                 });
@@ -29,7 +35,7 @@ HorarioModule.controller('crearHorarioCtrl', ['$scope', '$http', '$state', funct
         };
         
         $scope.actualizarProducto = function(){
-            if ($scope.horario.dia && $scope.horario.hora_inicio && horario.hora_finalizacion) {
+            if ($scope.horario.dia && $scope.horario.hora_inicio && $scope.horario.hora_finalizacion) {
                 $http.put('api/horarios/'+id, JSON.stringify($scope.horario)).then(function(response){
                     //Reinicia la vaariable
                     $scope.horario = {};

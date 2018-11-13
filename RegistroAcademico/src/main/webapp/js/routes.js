@@ -15,7 +15,7 @@ app.config(["$stateProvider", "$urlRouterProvider", function ($stateProvider, $u
                 
                 mainView:{
                     
-                    templateUrl : 'index.html'
+                   templateUrl : 'index.html'
                 }
             }
         });
