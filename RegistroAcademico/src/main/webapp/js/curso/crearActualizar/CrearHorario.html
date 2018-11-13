@@ -12,7 +12,7 @@
                                 <div class="col-xs-6">
                                      <div class="form-group">
                                         <label>Dia</label>
-                                        <select class="form-control" required name="dia">
+                                        <select class="form-control" ng-model="horario.dia" required name="dia">
                                             <option value="">-Seleccione-</option>
                                             <option>Lunes</option>
                                             <option>Martes</option>
@@ -26,19 +26,19 @@
                                 <div class="col-xs-6">
                                     <div class="form-group">
                                         <label>Hora Inicio</label>
-                                        <input type="time" class="form-control" required placeholder="Hora Inicio" name="hora_inicio">
+                                        <input type="time" class="form-control" required placeholder="Hora Inicio" ng-model="horario.hora_inicio" name="hora_inicio">
                                     </div>
                                 </div>
                                 <div class="col-xs-6">
                                     <div class="form-group">
                                         <label>Hora Fin</label>
-                                        <input type="time" class="form-control" required placeholder="Hora Fin" name="hora_fin">
+                                        <input type="time" class="form-control" required placeholder="Hora Fin" ng-model="horario.hora_finalizacion" name="hora_fin">
                                     </div>
                                 </div>
                                 <div class="col-xs-12">
                                     <div class="form-group text-center">
-                                        <button type="reset" class="btn btn-default">Cancelar</button>
-                                        <button type="submit" class="btn btn-primary">Guardar</button>
+                                        <button type="submit" class="btn btn-default" ng-if="!horario.id" id="crearBoton" ng-click="crearHorario()">Crear Horario</button>
+                                        <button type="submit" class="btn btn-primary" >cancelar</button>
                                     </div>
                                 </div>
                             </form>
