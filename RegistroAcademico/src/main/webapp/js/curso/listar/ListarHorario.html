@@ -1,0 +1,23 @@
+<div class="container-fluid">
+    <table class="table table-hover" id="tableHorario">
+        <thead>
+            <tr>
+                <th scope="col">Dia</th>
+                <th scope="col">Hora Inicio</th>
+                <th scope="col">Hora Fin</th>
+                <th>Acciones</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr ng-repeat="producto in productos">
+                <td>{{horario.dia}}</td>
+                <td>{{horario.hora_inicio}}</td>
+                <td>{{horario.hora_finalizacion}}</td>
+                <td>
+                    <button class="btn btn-danger" >Eliminar</button>
+                    <button class="btn btn-success" >Actualizar</button>
+                </td>
+            </tr>
+        </tbody>
+    </table> 
+    </<div>
