@@ -30,4 +30,13 @@ app.config(["$stateProvider", "$urlRouterProvider", function ($stateProvider, $u
            }
         });
 
+         $stateProvider.state("crearActualizarTipoCurso", {
+           url: '/tipoCurso' ,
+           views:{
+               mainView: {
+                   templateUrl: 'js/tipoCurso/crearActualizar/CrearTipoCurso.html',
+                   controller: 'crearTipoCursoCtrl'
+               }
+           }
+        });
 }]); 
