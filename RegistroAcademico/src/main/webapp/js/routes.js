@@ -28,4 +28,14 @@ app.config(["$stateProvider", "$urlRouterProvider", function ($stateProvider, $u
                }
            }
         });
+        
+        $stateProvider.state("listarTipoCurso", {
+           url: '/listarTipoCurso' ,
+           views:{
+               mainView: {
+                   templateUrl: 'js/tipoCurso/listar/ListarTipoCurso.html',
+                   controller: 'listarTipoCursoCtrl'
+               }
+           }
+        });
 }]); 

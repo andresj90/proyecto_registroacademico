@@ -40,7 +40,7 @@ HorarioModule.controller('crearHorarioCtrl', ['$scope', '$http', '$state', funct
                     //Reinicia la vaariable
                     $scope.horario = {};
                     // Nombre de la ruta definida en routes
-                    $state.go('crearActualizarHorario');
+                    $state.go('mainPage');
                 }, function(error){
                     console.log(error);
                 });

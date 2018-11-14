@@ -22,12 +22,14 @@ TipoCursoModule.controller('crearTipoCursoCtrl', ['$scope', '$http', '$state', f
         }
 
         $scope.crearTipoCurso = function () {
-            if ($scope.tipoCurso.nombre) {
+            console.log($scope.tipoCurso);
+            if ($scope.tipoCurso.nombreTipoCurso) {
                 $http.post('api/tipocursos', JSON.stringify($scope.tipoCurso)).then(function (response) {
+                    console.log(response.data);
                     //Reinicia la vaariable
                     $scope.tipoCurso = {};
                     // Nombre de la ruta definida en routes
-                    $state.go('mainPage');
+                    $state.go('listarTipoCurso');
                 }, function (error) {
                     console.log(error);
                 });
@@ -40,7 +42,7 @@ TipoCursoModule.controller('crearTipoCursoCtrl', ['$scope', '$http', '$state', f
                     //Reinicia la vaariable
                     $scope.tipoCurso = {};
                     // Nombre de la ruta definida en routes
-                    $state.go('mainPage');
+                    $state.go('listarTipoCurso');
                 }, function(error){
                     console.log(error);
                 });
