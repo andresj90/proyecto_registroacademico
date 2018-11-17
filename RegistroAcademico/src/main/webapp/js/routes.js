@@ -7,18 +7,7 @@ app.config(["$stateProvider", "$urlRouterProvider", function ($stateProvider, $u
         
         //Por cada ruta se crea un nuevo estado
         
-        $stateProvider.state("mainPage", {
-            
-            url: '/' , 
-            
-            views:{
-                
-                mainView:{
-                    
-                   templateUrl : 'index.html'
-                }
-            }
-        });
+ 
         
          $stateProvider.state("crearActualizarHorario", {
            url: '/horario' ,
@@ -30,4 +19,23 @@ app.config(["$stateProvider", "$urlRouterProvider", function ($stateProvider, $u
            }
         });
 
+         $stateProvider.state("crearActualizarTipoCurso", {
+           url: '/tipoCurso' ,
+           views:{
+               mainView: {
+                   templateUrl: 'js/tipoCurso/crearActualizar/CrearTipoCurso.html',
+                   controller: 'crearTipoCursoCtrl'
+               }
+           }
+        });
+        
+        $stateProvider.state("listarTipoCurso", {
+           url: '/listarTipoCurso' ,
+           views:{
+               mainView: {
+                   templateUrl: 'js/tipoCurso/listar/ListarTipoCurso.html',
+                   controller: 'listarTipoCursoCtrl'
+               }
+           }
+        });
 }]); 
