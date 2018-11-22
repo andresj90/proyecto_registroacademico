@@ -1,7 +1,6 @@
+var coordinadorModule = angular.module('coordinadorModule');
 
-var PersonaModule = angular.module('PersonaModule', []);
-
-PersonaModule.controller('personaCtrl', ['$scope', '$http', '$state', function ($scope, $http, $state) {
+coordinadorModule.controller('coordinadorCtrl', ['$scope', '$http', '$state', function ($scope, $http, $state) {
         var id = $state.params.id;
         
         $scope.coordinador = {}; 
@@ -22,7 +21,7 @@ PersonaModule.controller('personaCtrl', ['$scope', '$http', '$state', function (
                 && $scope.coordinador.email && $scope.coordinador.tipo_documento_id &&  $scope.coordinador.nro_documento) {
                         $http.post('api/coordinadores', JSON.stringify($scope.coordinador)).then(function (response) {
                         $scope.coordinador = {}; 
-                        $state.go(); 
+                        $state.reload();
                 
             },function(error) {
               console.log(error);
@@ -31,18 +30,31 @@ PersonaModule.controller('personaCtrl', ['$scope', '$http', '$state', function (
         }; 
          
          
-     $scope.actualizarCoordinador = function(){
+         //list tipe of documents 
+         
+         $scope.tiposDocumentos = new Array(); 
+         $http.get('api/tipodocumentos').then(function (response) {
+                
+                $scope.tiposDocumentos = response.data; 
+            }, function (error) {
+                console.log(error);
+            });
+      
+
+
+         //update a coordinator 
+         
+         $scope.actualizarCoordinador = function () {
             if ($scope.coordinador.nombres && $scope.coordinador.apellidos && $scope.coordinador.genero
-                && $scope.coordinador.email && $scope.coordinador.tipo_documento_id &&  $scope.coordinador.nro_documento){
-                    //Reinicia la vaariable
+                && $scope.coordinador.email && $scope.coordinador.tipo_documento_id &&  $scope.coordinador.nro_documento) {
+                $http.put('api/coordinadores/'+id, JSON.stringify($scope.coordinador)).then(function (response) {
                     $scope.coordinador = {}; 
-                    // Nombre de la ruta definida en routes
-                    $state.go('crearActualizarHorario');
-                }, function(error){
+                    $state.go();
+                }, function (error) {
+                    
                     console.log(error);
                 });
-            }
-        };  
-
+            }   
+         };
         
     }]); 

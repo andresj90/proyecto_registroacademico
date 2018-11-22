@@ -34,10 +34,10 @@
             <div class="collapse navbar-collapse" id="navbarColor01">
                 <ul class="navbar-nav mr-auto">
                     <li class="nav-item">
-                        <a class="nav-link" href="evsp.html">Estudiante</a>
+                        <a class="nav-link" href="#!coordinador">Coordinador</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="evsp.html">Docente</a>
+                        <a class="nav-link" href="">Docente</a>
                     </li>
                     <li class="nav-item">
                         <a class="nav-link" href="servidorAplicaciones.html">Programa</a>
@@ -55,29 +55,31 @@
             </div>
         </nav>
         <br>
-      <div ui-view = "mainView">
-        <div  class="container-fluid" >
-            <div class="cuerpo">
-                <br>
-                <div class="row">
-                    <div class="col-md-2"></div>
-                    <div class="col-md-8">
-                        <div class="jumbotron">
-                            <h1 class="display-3">Registro Academico</h1>
-                            <p class="lead">La Plataforma de Registro Académico es el sistema en el cual los estudiantes activos de nuestra institución pueden consultar sus notas, inscribir sus asignaturas y hacer modificaciones al registro en los tiempos determinados para tal fin.</p>
-                            <hr class="my-4">
+        <div ui-view = "mainView" style="text-align: center">
+            <div  class="container-fluid" >
+                <div class="cuerpo">
+                    <br>
+                    <div class="row">
+                        <div class="col-md-2"></div>
+                        <div class="col-md-8">
+                            <div class="jumbotron">
+                                <h1 class="display-3">Registro Academico</h1>
+                                <p class="lead">La Plataforma de Registro Académico es el sistema en el cual los estudiantes activos de nuestra institución pueden consultar sus notas, inscribir sus asignaturas y hacer modificaciones al registro en los tiempos determinados para tal fin.</p>
+                                <hr class="my-4">
+                            </div>
                         </div>
                     </div>
-                </div>
+                </div> 
             </div> 
-        </div> 
         </div>
  
         <script src="js/app.js" type="text/javascript"></script>
         <script src="js/routes.js" type="text/javascript"></script>
-        <script src="js/curso/HorarioModulo.js" type="text/javascript"></script>
-        <script src="js/curso/crearActualizar/horario.CrearActualizar.ctrl.js" type="text/javascript"></script>
-
+        <script src="js/horario/HorarioModulo.js" type="text/javascript"></script>
+        <script src="js/horario/crearActualizar/horario.CrearActualizar.ctrl.js" type="text/javascript"></script>
+        <script src="js/horario/listar/listarHorario.ctrl.js" type="text/javascript"></script>
+        <script src="js/coordinador/CoordinadorModule.js" type="text/javascript"></script>
+        <script src="js/coordinador/crearActualizar/coordinador.AgregarActualizar.Ctrl.js" type="text/javascript"></script>
         
     </body>
 </html>

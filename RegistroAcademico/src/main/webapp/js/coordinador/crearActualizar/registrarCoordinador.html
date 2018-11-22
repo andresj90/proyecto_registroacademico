@@ -1,0 +1,24 @@
+<form name="myForm">
+    <legend>Registro coordinador</legend>
+    
+    Nombre : <input type="text" placeholder="Ingrese nombres" ng-model="coordinador.nombres"></input> 
+    <br>
+    Apellidos : <input type="text" placeholder="Ingrese apellidos" ng-model="coordinador.apellidos"></input> 
+    <br>
+    genero : <input type="text" placeholder="Ingrese genero" ng-model="coordinador.genero"></input> 
+   
+    <br>
+    email : <input type="email" placeholder="Ingrese email" name="emailInput" ng-model="coordinador.email"></input> 
+    <span ng-show="myForm.emailInput.$error.email" >formato invalido</span>
+    <br>
+    tipo de documento :<input  type="text" ng-model="coordinador.tipo_documento_id"></input>
+    <!--<select ng-model="coordinador.tipo_documento_id">
+         <option ng-repeat="t in tiposDocumentos">{{t.tipo_documento}}</option>
+     </select>-->
+    <br>
+    numero de documento : <input type="text" placeholder="Ingrese nro de documento" ng-model="coordinador.nro_documento"></input> 
+    <br>
+    <button type="button" class="btn alert-primary" ng-if="!coordinador.id_coodinador" ng-click="registrarCoordinador()" >Registrar</button>
+    <span><button type="reset" class="btn badge-success" ng-if="coordinador.id_coodinador" >Actualizar</button></span>
+    <span><button type="reset" class="btn badge-secondary" >cancelar</button></span>
+</form>

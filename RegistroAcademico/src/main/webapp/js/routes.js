@@ -44,5 +44,26 @@ app.config(["$stateProvider", "$urlRouterProvider", function ($stateProvider, $u
            }
             
         }); 
+        
+        
+        
+        //routes for docente 
+      
+                
+        $stateProvider.state("registrarCoordinador", {
+           url: '/coordinador' ,
+           views: {
+               
+               mainView :{
+                  templateUrl: 'js/coordinador/crearActualizar/registrarCoordinador.html',
+                  controller : 'coordinadorCtrl' 
+               
+               }
+           }
+            
+        }); 
+        
+        
+        
 
 }]); 
