@@ -1,4 +1,4 @@
-<div class="container-fluid">
+<div class="container-fluid" style="text-align: center">
 
             <h1>Crear Horario</h1>
             <div class="row">
@@ -26,19 +26,20 @@
                                 <div class="col-xs-6">
                                     <div class="form-group">
                                         <label>Hora Inicio</label>
-                                        <input type="text" class="form-control" required placeholder="Hora Inicio" ng-model="horario.hora_inicio" name="hora_inicio">
+                                        <input type="time" class="form-control" required placeholder="Hora Inicio" ng-model="horario.horarioInicio" name="hora_inicio">
                                     </div>
                                 </div>
                                 <div class="col-xs-6">
                                     <div class="form-group">
                                         <label>Hora Fin</label>
-                                        <input type="time" class="form-control" required placeholder="Hora Fin" ng-model="horario.hora_finalizacion" name="hora_fin">
+                                        <input type="time" class="form-control" required placeholder="Hora Fin" ng-model="horario.horarioFinalizacion" name="hora_fin">
                                     </div>
                                 </div>
                                 <div class="col-xs-12">
                                     <div class="form-group text-center">
-                                        <button type="submit" class="btn btn-default" ng-if="!horario.id" id="crearBoton" ng-click="crearHorario()">Crear Horario</button>
-                                        <button type="submit" class="btn btn-primary" >cancelar</button>
+                                        <button class="btn btn-secondary" ng-if="!horario.idHorario" id="crearBoton" ng-click="crearHorario()">Crear Horario</button>
+                                        <button class="btn btn-danger"  ng-if="horario.idHorario" id="crearBoton" ng-click="actualizarHorario()">Actualizar Horario</button>
+                                        <button class="btn btn-primary" >cancelar</button>
                                     </div>
                                 </div>
                             </form>
