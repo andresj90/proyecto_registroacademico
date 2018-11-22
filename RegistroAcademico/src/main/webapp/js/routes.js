@@ -13,7 +13,7 @@ app.config(["$stateProvider", "$urlRouterProvider", function ($stateProvider, $u
            url: '/horario' ,
            views:{
                mainView: {
-                   templateUrl: 'js/curso/crearActualizar/CrearHorario.html',
+                   templateUrl: 'js/horario/crearActualizar/CrearHorario.html',
                    controller: 'crearHorarioCtrl'
                }
            }
@@ -35,6 +35,26 @@ app.config(["$stateProvider", "$urlRouterProvider", function ($stateProvider, $u
                mainView: {
                    templateUrl: 'js/tipoCurso/listar/ListarTipoCurso.html',
                    controller: 'listarTipoCursoCtrl'
+               }
+           }
+        });
+        
+        $stateProvider.state("listarCurso", {
+           url: '/listarCurso' ,
+           views:{
+               mainView: {
+                   templateUrl: 'js/curso/listar/ListarCurso.html',
+                   controller: 'listarTipoCursoCtrl'
+               }
+           }
+        });
+        
+        $stateProvider.state("crearActualizarCurso", {
+           url: '/Curso' ,
+           views:{
+               mainView: {
+                   templateUrl: 'js/curso/crearActualizar/CrearCurso.html',
+                   controller: 'crearCursoCtrl'
                }
            }
         });

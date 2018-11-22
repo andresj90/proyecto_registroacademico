@@ -1,0 +1,22 @@
+<div class="container-fluid">
+    <table class="table table-hover" id="tableHorario">
+        <thead>
+            <tr>
+                <th scope="col">Nombre Curso</th>
+                <th scope="col">Programa</th>
+                <th>Acciones</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr ng-repeat="horario in horario">
+                <td>{{horario.dia}}</td>
+                <td>{{horario.hora_inicio}}</td>
+                <td>{{horario.hora_finalizacion}}</td>
+                <td>
+                    <button class="btn btn-danger" >Eliminar</button>
+                    <button class="btn btn-success" >Actualizar</button>
+                </td>
+            </tr>
+        </tbody>
+    </table> 
+    </<div>

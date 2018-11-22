@@ -1,0 +1,38 @@
+<div class="container-fluid">
+
+            <h1>Crear Curso</h1>
+            <div class="row">
+                <div class="col-xs-6 col-xs-offset-3" style="padding-top: 3em">
+                    <div class="panel panel-primary">
+                        <div class="panel-heading">
+                            <h3 class="panel-title text-center">Información Curso</h3>
+                        </div>
+                        <div class="panel-body">
+                            <form>
+                                <div class="col-xs-6">
+                                    <div class="form-group">
+                                        <label>Nombre Curso</label>
+                                        <input type="text" class="form-control" required placeholder="Nombre Curso" ng-model="horario.hora_inicio">
+                                    </div>
+                                </div>
+                                <div class="col-xs-6">
+                                     <div class="form-group">
+                                        <label>Programa</label>
+                                        <select class="form-control" ng-model="horario.dia" required name="dia">
+                                            <option value="">-Seleccione-</option>
+                                        </select>
+                                    </div>
+                                </div>
+                                <div class="col-xs-12">
+                                    <div class="form-group text-center">
+                                        <button type="submit" class="btn btn-default" ng-if="!horario.id" id="crearBoton" ng-click="crearHorario()">Crear Horario</button>
+                                        <button type="submit" class="btn btn-primary" >cancelar</button>
+                                    </div>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+    </div>
+
