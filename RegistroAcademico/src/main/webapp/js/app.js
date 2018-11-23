@@ -4,5 +4,7 @@ var app = angular.module('RegistroAcademico', [
     'horarioModule',
     'coordinadorModule',
     'HorarioModule',
-    'TipoCursoModule'
+    'TipoCursoModule',
+    'ProgramaModule',
+    'InscripcionModule'
 ]);
