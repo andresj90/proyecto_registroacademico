@@ -9,13 +9,13 @@
             </tr>
         </thead>
         <tbody>
-            <tr ng-repeat="horario in horario">
+            <tr ng-repeat="horario in horarios">
                 <td>{{horario.dia}}</td>
-                <td>{{horario.hora_inicio}}</td>
-                <td>{{horario.hora_finalizacion}}</td>
+                <td>{{horario.horarioInicio}}</td>
+                <td>{{horario.horarioFinalizacion}}</td>
                 <td>
-                    <button class="btn btn-danger" >Eliminar</button>
-                    <button class="btn btn-success" >Actualizar</button>
+                    <button class="btn btn-danger" ng-click="eliminarHorario(horario.idHorario)">Eliminar</button>
+                    <button class="btn btn-success" ui-sref="editarHorarios({id:horario.idHorario})" >Actualizar</button>
                 </td>
             </tr>
         </tbody>

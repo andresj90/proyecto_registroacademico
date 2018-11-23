@@ -10,8 +10,8 @@
             <tr ng-repeat="tipoCurso in tipoCursos">
                 <td>{{tipoCurso.nombreTipoCurso}}</td>
                 <td>
-                    <button class="btn btn-danger" >Eliminar</button>
-                    <button class="btn btn-success" >Actualizar</button>
+                    <button class="btn btn-danger" ng-click="eliminarTipoCurso(tipoCurso.idTipoCurso)">Eliminar</button>
+                    <button class="btn btn-success" ui-sref="editarTipoCurso({id:tipoCurso.idTipoCurso})">Actualizar</button>
                 </td>
             </tr>
         </tbody>

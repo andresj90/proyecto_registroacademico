@@ -1,0 +1,19 @@
+<div class="container-fluid">
+    <table class="table table-hover" id="tableHorario">
+        <thead>
+            <tr>
+                <th scope="col">Nombre Grupo</th>
+                <th>Acciones</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr ng-repeat="grupo in grupos">
+                <td>{{grupo.nombreGrupo}}</td>
+                <td>
+                    <button class="btn btn-danger" ng-click="eliminarGrupo(grupo.idGrupo)">Eliminar</button>
+                    <button class="btn btn-success" ui-sref="editarGrupo({id:grupo.idGrupo})">Actualizar</button>
+                </td>
+            </tr>
+        </tbody>
+    </table> 
+</<div>

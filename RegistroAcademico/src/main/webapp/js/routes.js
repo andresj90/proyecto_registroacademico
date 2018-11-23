@@ -9,15 +9,41 @@ app.config(["$stateProvider", "$urlRouterProvider", function ($stateProvider, $u
         
  
         
-         $stateProvider.state("crearActualizarHorario", {
+          $stateProvider.state("crearActualizarHorario", {
            url: '/horario' ,
            views:{
                mainView: {
                    templateUrl: 'js/horario/crearActualizar/CrearHorario.html',
-                   controller: 'crearHorarioCtrl'
+                   controller: 'horarioCtrl'
                }
            }
         });
+        
+
+        
+        $stateProvider.state("listarHorarios", {
+           url: '/horariolist' ,
+           views:{
+               mainView: {
+                   templateUrl: 'js/horario/listar/ListarHorario.html',
+                   controller: 'listarHorarioCtrl'
+               }
+           }
+        });
+        
+        
+        $stateProvider.state("editarHorarios", {
+           url: '/horarios/:id' ,
+           views: {
+               
+               mainView :{
+                  templateUrl: 'js/horario/crearActualizar/CrearHorario.html',
+                  controller : 'horarioCtrl' 
+               
+               }
+           }
+            
+        }); 
 
          $stateProvider.state("crearActualizarTipoCurso", {
            url: '/tipoCurso' ,
@@ -38,6 +64,18 @@ app.config(["$stateProvider", "$urlRouterProvider", function ($stateProvider, $u
                }
            }
         });
+        $stateProvider.state("editarTipoCurso", {
+           url: '/tipoCurso/:id' ,
+           views: {
+               
+               mainView :{
+                  templateUrl: 'js/tipoCurso/crearActualizar/CrearTipoCurso.html',
+                  controller : 'crearTipoCursoCtrl' 
+               
+               }
+           }
+            
+        }); 
         
         $stateProvider.state("listarCurso", {
            url: '/listarCurso' ,
@@ -77,4 +115,34 @@ app.config(["$stateProvider", "$urlRouterProvider", function ($stateProvider, $u
                }
            }
         });
+        $stateProvider.state("crearActualizarGrupo", {
+           url: '/grupo' ,
+           views:{
+               mainView: {
+                   templateUrl: 'js/grupo/crearActualizar/CrearGrupo.html',
+                   controller: 'crearGrupoCtrl'
+               }
+           }
+        });
+        
+        $stateProvider.state("listarGrupo", {
+           url: '/listarGrupo' ,
+           views:{
+               mainView: {
+                   templateUrl: 'js/grupo/listar/ListarGrupo.html',
+                   controller: 'listarGrupoCtrl'
+               }
+           }
+        });
+        $stateProvider.state("editarGrupo", {
+           url: '/grupo/:id' ,
+           views: {
+               
+               mainView :{
+                  templateUrl: 'js/grupo/crearActualizar/CrearGrupo.html',
+                  controller : 'crearGrupoCtrl' 
+               }
+           }
+            
+        }); 
 }]); 

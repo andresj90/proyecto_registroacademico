@@ -1,16 +1,9 @@
-/* global horario */
+var horarioModule = angular.module('horarioModule'); 
 
-var HorarioModule = angular.module('HorarioModule');
 
-HorarioModule.controller('crearHorarioCtrl', ['$scope', '$http', '$state', function ($scope, $http, $state) {
+horarioModule.controller('horarioCtrl' , ['$scope', '$http', '$state', function ($scope, $http, $state) {
         var id = $state.params.id;
         
-       $scope.convertirAPalabra = function (dato){
-                
-                return dato.toString();
-       }
-
-
         $scope.horario = {};
 
         if (id) {
@@ -22,30 +15,36 @@ HorarioModule.controller('crearHorarioCtrl', ['$scope', '$http', '$state', funct
         }
 
         $scope.crearHorario = function () {
-            if ($scope.horario.dia && $scope.horario.hora_inicio && $scope.horario.hora_finalizacion) {
+            if ($scope.horario.dia && $scope.horario.horarioInicio && $scope.horario.horarioFinalizacion) {
                 $http.post('api/horarios', JSON.stringify($scope.horario)).then(function (response) {
                     //Reinicia la vaariable
                     $scope.horario = {};
                     // Nombre de la ruta definida en routes
-                    $state.go('mainPage');
+                    $state.go('listarHorarios');
                 }, function (error) {
                     console.log(error);
                 });
             }
         };
         
-        $scope.actualizarProducto = function(){
-            if ($scope.horario.dia && $scope.horario.hora_inicio && $scope.horario.hora_finalizacion) {
-                $http.put('api/horarios/'+id, JSON.stringify($scope.horario)).then(function(response){
-                    //Reinicia la vaariable
-                    $scope.horario = {};
-                    // Nombre de la ruta definida en routes
-                    $state.go('mainPage');
-                }, function(error){
+        $scope.actualizarHorario = function () {
+            
+            if ($scope.horario.dia && $scope.horario.horarioInicio && $scope.horario.horarioFinalizacion) {
+                
+                   $http.put('api/horarios/' + id ,JSON.stringify($scope.horario)).then(function (response) {
+                   $scope.horario = {}; 
+                   $state.go('listarHorarios');
+                
+            }, function (error) {
+                    
                     console.log(error);
-                });
+               });  
             }
         };
+        
+ 
+
+   
     }]);
 
 
