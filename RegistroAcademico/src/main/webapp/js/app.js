@@ -3,5 +3,6 @@ var app = angular.module('RegistroAcademico', [
     'ui.router',
     'HorarioModule',
     'TipoCursoModule',
-    'CursoModule'
+    'CursoModule',
+    'CursoGrupoModule'
 ]);

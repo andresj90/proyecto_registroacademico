@@ -44,7 +44,7 @@ app.config(["$stateProvider", "$urlRouterProvider", function ($stateProvider, $u
            views:{
                mainView: {
                    templateUrl: 'js/curso/listar/ListarCurso.html',
-                   controller: 'listarTipoCursoCtrl'
+                   controller: 'listarCursoCtrl'
                }
            }
         });
@@ -55,6 +55,25 @@ app.config(["$stateProvider", "$urlRouterProvider", function ($stateProvider, $u
                mainView: {
                    templateUrl: 'js/curso/crearActualizar/CrearCurso.html',
                    controller: 'crearCursoCtrl'
+               }
+           }
+        });
+        $stateProvider.state("listarCursoGrupo", {
+           url: '/listarCursoGrupo' ,
+           views:{
+               mainView: {
+                   templateUrl: 'js/cursoGrupo/listar/ListarCursoGrupo.html',
+                   controller: 'listarCursoGrupoCtrl'
+               }
+           }
+        });
+        
+        $stateProvider.state("crearActualizarCursoGrupo", {
+           url: '/CursoGrupo' ,
+           views:{
+               mainView: {
+                   templateUrl: 'js/cursoGrupo/crearActualizar/CrearCursoGrupo.html',
+                   controller: 'crearCursoGrupoCtrl'
                }
            }
         });

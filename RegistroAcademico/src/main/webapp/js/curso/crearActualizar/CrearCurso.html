@@ -12,20 +12,20 @@
                                 <div class="col-xs-6">
                                     <div class="form-group">
                                         <label>Nombre Curso</label>
-                                        <input type="text" class="form-control" required placeholder="Nombre Curso" ng-model="horario.hora_inicio">
+                                        <input type="text" class="form-control" required placeholder="Nombre Curso" ng-model="curso.nom_curso">
                                     </div>
                                 </div>
                                 <div class="col-xs-6">
                                      <div class="form-group">
                                         <label>Programa</label>
-                                        <select class="form-control" ng-model="horario.dia" required name="dia">
-                                            <option value="">-Seleccione-</option>
+                                        <select class="form-control" ng-model="curso.programa_id_pr" required name="dia">
+                                            <option ng-repeat="p in programas" >{{p.nombre_programa}}</option>
                                         </select>
                                     </div>
                                 </div>
                                 <div class="col-xs-12">
                                     <div class="form-group text-center">
-                                        <button type="submit" class="btn btn-default" ng-if="!horario.id" id="crearBoton" ng-click="crearHorario()">Crear Horario</button>
+                                        <button type="submit" class="btn btn-default" ng-if="!curso.id" id="crearBoton" ng-click="crearCurso()">Crear Horario</button>
                                         <button type="submit" class="btn btn-primary" >cancelar</button>
                                     </div>
                                 </div>

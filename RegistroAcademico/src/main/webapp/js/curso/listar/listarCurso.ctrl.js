@@ -1,6 +1,6 @@
 var CursoModule = angular.module('CursoModule');
 
-CursoModule.controller('listarTipoCursoCtrl', ['$scope', '$http', '$state', function ($scope, $http, $state) {
+CursoModule.controller('listarCursoCtrl', ['$scope', '$http', '$state', function ($scope, $http, $state) {
         $scope.cursos = new Array();
         console.log($scope.cursos);
         $http.get('api/cursos').then(function (response) {
