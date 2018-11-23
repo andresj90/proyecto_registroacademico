@@ -1,3 +1,3 @@
-var horarioModule = angular.module('horarioModule' ,[
+var HorarioModule = angular.module('HorarioModule' ,[
     
 ]);

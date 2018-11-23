@@ -63,7 +63,7 @@ app.config(["$stateProvider", "$urlRouterProvider", function ($stateProvider, $u
         }); 
         
         
-        
+        // routes for Tipo Curso
 
          $stateProvider.state("crearActualizarTipoCurso", {
            url: '/tipoCurso' ,
@@ -84,4 +84,80 @@ app.config(["$stateProvider", "$urlRouterProvider", function ($stateProvider, $u
                }
            }
         });
+        
+        //routes for inscripcion
+        
+         $stateProvider.state("crearActualizarInscripcion", {
+           url: '/inscripcion' ,
+           views:{
+               mainView: {
+                   templateUrl: 'js/inscripcion/crearActualizar/CrearInscripcion.html',
+                   controller: 'inscripcionCtrl'
+               }
+           }
+        });
+        
+
+        
+        $stateProvider.state("listarInscripciones", {
+           url: '/' ,
+           views:{
+               mainView: {
+                   templateUrl: 'js/inscripcion/listar/ListarInscripcion.html',
+                   controller: 'listarInscripcionCtrl'
+               }
+           }
+        });
+        
+        
+        $stateProvider.state("editarInscripcion", {
+           url: '/inscripciones/:id' ,
+           views: {
+               
+               mainView :{
+                  templateUrl: 'js/inscripcion/crearInscripcion/CrearInscripcion.html',
+                  controller : 'inscripcionCtrl' 
+               
+               }
+           }
+            
+        }); 
+        
+        //routes for Programa
+        
+         $stateProvider.state("crearActualizarPrograma", {
+           url: '/programa' ,
+           views:{
+               mainView: {
+                   templateUrl: 'js/programa/crearActualizar/CrearPrograma.html',
+                   controller: 'programaCtrl'
+               }
+           }
+        });
+        
+
+        
+        $stateProvider.state("listarProgramas", {
+           url: '/' ,
+           views:{
+               mainView: {
+                   templateUrl: 'js/programa/listar/ListarPrograma.html',
+                   controller: 'listarProgramaCtrl'
+               }
+           }
+        });
+        
+        
+        $stateProvider.state("editarPrograma", {
+           url: '/programas/:id' ,
+           views: {
+               
+               mainView :{
+                  templateUrl: 'js/programa/crearActualizar/CrearPrograma.html',
+                  controller : 'programaCtrl' 
+               
+               }
+           }
+            
+        }); 
 }]); 

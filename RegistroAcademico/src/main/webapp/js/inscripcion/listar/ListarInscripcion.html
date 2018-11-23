@@ -1,14 +1,14 @@
 <div class="container-fluid">
-    <table class="table table-hover" id="tableHorario">
+    <table class="table table-hover" id="tableInscripcion">
         <thead>
             <tr>
-                <th scope="col">Nombre del tipo Curso</th>
+                <th scope="col">Nombre de la inscripcion</th>
                 <th>Acciones</th>
             </tr>
         </thead>
         <tbody>
-            <tr ng-repeat="tipoCurso in tipoCursos">
-                <td>{{tipoCurso.nombreTipoCurso}}</td>
+            <tr ng-repeat="Inscripcion in Inscripciones">
+                <td>{{inscripcion.nombreInscripcion}}</td>
                 <td>
                     <button class="btn btn-danger" >Eliminar</button>
                     <button class="btn btn-success" >Actualizar</button>
@@ -16,4 +16,4 @@
             </tr>
         </tbody>
     </table> 
-</<div> 
+</<div>
